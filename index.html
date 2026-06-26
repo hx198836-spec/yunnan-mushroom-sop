@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
-  <title>新客话术卡｜野生菌客服工作台</title>
+  <title>新客话术卡</title>
   <style>
     :root { --bg:#f4f6f4; --card:#fff; --text:#172026; --muted:#69737d; --line:#dde5de; --primary:#236545; --primary-dark:#174a32; --primary-soft:#eaf5ee; --warm:#fff7df; --shadow:0 10px 26px rgba(23,32,38,.08); --radius:14px; }
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
     .page{width:min(100%,980px);margin:0 auto;padding:14px 12px calc(76px + env(safe-area-inset-bottom))}.hero{position:sticky;top:0;z-index:20;margin:0;padding:max(14px,env(safe-area-inset-top)) 12px 12px;background:rgba(244,246,244,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:0 auto 10px;width:min(100%,980px)}
-    h1{margin:0;font-size:26px;line-height:1.15;letter-spacing:0}.subtitle{margin-top:3px;color:var(--muted);font-size:14px;font-weight:700}h2{margin:0;color:var(--primary-dark);font-size:20px;line-height:1.25;letter-spacing:0}.opening{width:min(100%,980px);margin:0 auto;background:var(--card);border:2px solid var(--primary);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
-    .opening-head,.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.bulk-copy,.toggle-btn{appearance:none;border:0;border-radius:12px;background:var(--primary);color:#fff;min-height:42px;padding:0 13px;font-size:15px;font-weight:900;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}.toggle-btn{background:var(--primary-soft);color:var(--primary-dark);border:1px solid #cfe4d4}
+    h1{margin:0;font-size:28px;line-height:1.15;letter-spacing:0}.subtitle{margin-top:3px;color:var(--muted);font-size:15px;font-weight:800}h2{margin:0;color:var(--primary-dark);font-size:20px;line-height:1.25;letter-spacing:0}.opening{width:min(100%,980px);margin:0 auto;background:var(--card);border:2px solid var(--primary);border-radius:var(--radius);padding:13px;box-shadow:var(--shadow)}
+    .opening-head,.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.bulk-copy,.toggle-btn{appearance:none;border:0;border-radius:13px;background:var(--primary);color:#fff;min-height:48px;padding:0 15px;font-size:16px;font-weight:950;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}.toggle-btn{min-height:40px;background:var(--primary-soft);color:var(--primary-dark);border:1px solid #cfe4d4;font-size:15px}
     .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin:12px 0;box-shadow:0 4px 14px rgba(23,32,38,.04);scroll-margin-top:170px}.search-wrap{position:sticky;top:185px;z-index:10;background:rgba(244,246,244,.94);padding:8px 0;margin:0 0 4px;backdrop-filter:blur(10px)}.search{width:100%;min-height:48px;border:2px solid var(--line);border-radius:13px;padding:0 14px;background:#fff;color:var(--text);font-size:17px;outline:none}.search:focus{border-color:var(--primary)}
-    .type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}.type-btn{appearance:none;border:1px solid #cfe4d4;border-radius:var(--radius);background:var(--card);color:var(--primary-dark);min-height:68px;padding:10px;font-size:16px;font-weight:900;text-align:left;box-shadow:0 3px 12px rgba(23,32,38,.04);cursor:pointer;-webkit-tap-highlight-color:transparent}.type-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}.type-btn{appearance:none;border:1px solid #cfe4d4;border-radius:var(--radius);background:var(--card);color:var(--primary-dark);min-height:72px;padding:10px;font-size:17px;font-weight:950;text-align:center;box-shadow:0 3px 12px rgba(23,32,38,.04);cursor:pointer;-webkit-tap-highlight-color:transparent}.type-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 8px 20px rgba(35,101,69,.22)}
     .type-card,.quick-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin:10px 0;padding:12px;box-shadow:0 4px 14px rgba(23,32,38,.04);scroll-margin-top:170px}.type-card{display:none}.type-card.active,.type-card.search-hit{display:block}.card-title{color:var(--primary-dark);font-size:18px;font-weight:950;margin-bottom:4px}.quick-grid{display:grid;grid-template-columns:1fr;gap:10px}.collapsible-content[hidden],.search-hidden,.type-buttons-hidden{display:none!important}
     .line{display:grid;grid-template-columns:1fr 74px;gap:10px;align-items:stretch;padding:10px 0;border-top:1px solid var(--line);transition:background .2s ease,box-shadow .2s ease}.line:first-of-type{border-top:0}.line.copied{margin-left:-8px;margin-right:-8px;padding-left:8px;padding-right:8px;border-radius:10px;background:var(--warm);box-shadow:inset 0 0 0 1px #f1d98f}.text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.55}.num{color:var(--primary-dark);font-weight:950;margin-right:5px}.copy{appearance:none;border:0;border-radius:12px;background:var(--primary);color:#fff;font-size:15px;font-weight:900;min-height:44px;padding:0 8px;cursor:pointer;-webkit-tap-highlight-color:transparent}.copy:active,.bulk-copy:active{background:var(--primary-dark);transform:scale(.98)}
     .section-title{margin:18px 0 10px;scroll-margin-top:170px}.version{margin:22px 0 10px;text-align:center;color:var(--muted);font-size:13px;font-weight:700}.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:8px 10px max(8px,env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);backdrop-filter:blur(12px);box-shadow:0 -8px 24px rgba(23,32,38,.08)}.bottom-nav-inner{width:min(100%,980px);margin:0 auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:40px;border-radius:12px;background:var(--primary-soft);color:var(--primary-dark);text-decoration:none;font-size:14px;font-weight:900}.toast{position:fixed;left:50%;bottom:calc(70px + env(safe-area-inset-bottom));z-index:40;transform:translateX(-50%);max-width:min(88vw,420px);padding:10px 14px;border-radius:999px;background:rgba(23,32,38,.92);color:#fff;font-size:14px;font-weight:800;opacity:0;pointer-events:none;transition:opacity .2s ease;text-align:center}.toast.show{opacity:1}
@@ -24,13 +24,14 @@
   <main class="page">
     <section class="panel" id="customer"><div class="section-head"><h2>② 客户回复后，按情况复制</h2></div><div class="search-wrap"><input class="search" id="searchInput" type="search" placeholder="搜索：保存 / 优惠 / 红葱 / 定制 / 加热"></div><div class="type-grid" id="typeButtons"></div></section>
     <section id="types"></section>
-    <section class="section-title" id="products-anchor"><div class="section-head"><h2>③ 按产品快速补一句</h2><button class="toggle-btn" type="button" data-toggle="products">展开</button></div><div class="collapsible-content quick-grid" id="products" hidden></div></section>
-    <section class="section-title" id="qa-anchor"><div class="section-head"><h2>④ 客户常问，直接回</h2><button class="toggle-btn" type="button" data-toggle="qas">展开</button></div><div class="collapsible-content quick-grid" id="qas" hidden></div></section>
-    <section class="section-title" id="push-anchor"><div class="section-head"><h2>⑤ 推进下单</h2></div><div class="quick-grid" id="push"></div></section>
-    <section class="section-title" id="after-anchor"><div class="section-head"><h2>⑥ 成交后</h2></div><div class="quick-grid" id="after"></div></section>
-    <div class="version">版本：新客话术卡 v1.1｜界面优化版</div>
+    <section class="section-title" id="hot-anchor"><div class="section-head"><h2>③ 高频快捷</h2></div><div class="quick-grid" id="hot"></div></section>
+    <section class="section-title" id="products-anchor"><div class="section-head"><h2>④ 按产品快速补一句</h2><button class="toggle-btn" type="button" data-toggle="products">展开</button></div><div class="collapsible-content quick-grid" id="products" hidden></div></section>
+    <section class="section-title" id="qa-anchor"><div class="section-head"><h2>⑤ 客户常问，直接回</h2><button class="toggle-btn" type="button" data-toggle="qas">展开</button></div><div class="collapsible-content quick-grid" id="qas" hidden></div></section>
+    <section class="section-title" id="push-anchor"><div class="section-head"><h2>⑥ 推进下单</h2><button class="toggle-btn" type="button" data-toggle="push">展开</button></div><div class="collapsible-content quick-grid" id="push" hidden></div></section>
+    <section class="section-title" id="after-anchor"><div class="section-head"><h2>⑦ 成交后</h2><button class="toggle-btn" type="button" data-toggle="after">展开</button></div><div class="collapsible-content quick-grid" id="after" hidden></div></section>
+    <div class="version">版本：新客话术卡 v1.2｜客服易用版</div>
   </main>
-  <nav class="bottom-nav" aria-label="快捷导航"><div class="bottom-nav-inner"><a href="#customer">客户类型</a><a href="#products-anchor">产品</a><a href="#qa-anchor">常问</a><a href="#push-anchor">下单</a><a href="#after-anchor">成交后</a></div></nav>
+  <nav class="bottom-nav" aria-label="快捷导航"><div class="bottom-nav-inner"><a href="#customer">客户</a><a href="#products-anchor">产品</a><a href="#qa-anchor">常问</a><a href="#push-anchor">下单</a><a href="#after-anchor">成交</a></div></nav>
   <div class="toast" id="toast">请长按手动复制</div>
   <script>const opening = [
       "朋友！！你好呀",
@@ -223,6 +224,36 @@ const after = [
             "你收到后尝尝看，喜欢的话跟我说一声。"
       ]
 ];
+const hot = [
+      [
+            "买几份合适",
+            qas.find(([title])=>title==="买几份合适")[1]
+      ],
+      [
+            "安不安全",
+            qas.find(([title])=>title==="安不安全")[1]
+      ],
+      [
+            "怎么保存",
+            qas.find(([title])=>title==="怎么保存")[1]
+      ],
+      [
+            "发链接",
+            push.find(([title])=>title==="发链接")[1]
+      ],
+      [
+            "客户没反应",
+            push.find(([title])=>title==="客户没反应")[1]
+      ],
+      [
+            "红葱5份起",
+            qas.find(([title])=>title==="红葱能不能买一两份尝尝")[1]
+      ],
+      [
+            "定制10份起",
+            qas.find(([title])=>title==="能不能不辣/不蒜/不用猪油")[1]
+      ]
+];
     const state={activeType:null,query:''};const toast=document.getElementById('toast');
     function makeLine(text,index){const row=document.createElement('div');row.className='line';row.dataset.text=text;const content=document.createElement('div');content.className='text';if(index){const num=document.createElement('span');num.className='num';num.textContent=index+'.';content.append(num,document.createTextNode(text));}else{content.textContent=text;}const button=document.createElement('button');button.className='copy';button.type='button';button.textContent='复制';button.dataset.copy=text;row.append(content,button);return row;}
     function renderLines(container,lines,numbered=false){lines.forEach((text,idx)=>container.appendChild(makeLine(text,numbered?idx+1:null)));}
@@ -230,10 +261,10 @@ const after = [
     function renderQuick(containerId,items){const container=document.getElementById(containerId);items.forEach(([title,lines])=>{const card=document.createElement('section');card.className='quick-card';card.dataset.search=[title,...(Array.isArray(lines)?lines:[lines])].join(' ');const h=document.createElement('div');h.className='card-title';h.textContent=title;card.appendChild(h);(Array.isArray(lines)?lines:[lines]).forEach(text=>card.appendChild(makeLine(text)));container.appendChild(card);});}
     function setActiveType(id){state.activeType=state.activeType===id?null:id;document.querySelectorAll('.type-btn').forEach(button=>button.classList.toggle('active',button.dataset.target===state.activeType));document.querySelectorAll('.type-card').forEach(card=>card.classList.toggle('active',card.id===state.activeType&&!state.query));if(state.activeType&&!state.query)document.getElementById(state.activeType).scrollIntoView({behavior:'smooth',block:'start'});}
     function setSectionOpen(id,open){const content=document.getElementById(id);const button=document.querySelector(`[data-toggle="${id}"]`);content.hidden=!open;if(button)button.textContent=open?'收起':'展开';}
-    function applySearch(query){state.query=query.trim().toLowerCase();const searching=Boolean(state.query);document.getElementById('typeButtons').classList.toggle('type-buttons-hidden',searching);document.querySelectorAll('.type-card').forEach(card=>{const hit=searching&&card.dataset.search.toLowerCase().includes(state.query);card.classList.toggle('search-hit',hit);card.classList.toggle('active',!searching&&card.id===state.activeType);});['products','qas'].forEach(id=>{if(searching)setSectionOpen(id,true);});document.querySelectorAll('.quick-card').forEach(card=>{const hit=!searching||card.dataset.search.toLowerCase().includes(state.query);card.classList.toggle('search-hidden',!hit);});}
+    function applySearch(query){state.query=query.trim().toLowerCase();const searching=Boolean(state.query);document.getElementById('typeButtons').classList.toggle('type-buttons-hidden',searching);document.querySelectorAll('.type-card').forEach(card=>{const hit=searching&&card.dataset.search.toLowerCase().includes(state.query);card.classList.toggle('search-hit',hit);card.classList.toggle('active',!searching&&card.id===state.activeType);});['products','qas','push','after'].forEach(id=>{if(searching)setSectionOpen(id,true);});document.querySelectorAll('.quick-card').forEach(card=>{const hit=!searching||card.dataset.search.toLowerCase().includes(state.query);card.classList.toggle('search-hidden',!hit);});}
     function showToast(message){toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1400);}
     async function copyText(text,button,row){let ok=false;try{await navigator.clipboard.writeText(text);ok=true;}catch(err){try{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.focus();ta.select();ok=document.execCommand('copy');document.body.removeChild(ta);}catch(fallbackErr){ok=false;}}if(!ok){showToast('请长按手动复制');return;}const old=button.textContent;button.textContent='已复制';if(row){row.classList.add('copied');setTimeout(()=>row.classList.remove('copied'),1000);}setTimeout(()=>{button.textContent=old;},1000);}
-    renderLines(document.getElementById('openingLines'),opening,true);renderTypes();renderQuick('products',products);renderQuick('qas',qas);renderQuick('push',push);renderQuick('after',after);
+    renderLines(document.getElementById('openingLines'),opening,true);renderTypes();renderQuick('hot',hot);renderQuick('products',products);renderQuick('qas',qas);renderQuick('push',push);renderQuick('after',after);
     document.getElementById('copyOpening').addEventListener('click',event=>copyText(opening.map((text,idx)=>`${idx+1}. ${text}`).join('\n'),event.currentTarget,document.getElementById('opening')));document.getElementById('typeButtons').addEventListener('click',event=>{const button=event.target.closest('.type-btn');if(button)setActiveType(button.dataset.target);});document.getElementById('searchInput').addEventListener('input',event=>applySearch(event.target.value));document.addEventListener('click',event=>{const copyButton=event.target.closest('button.copy');if(copyButton){copyText(copyButton.dataset.copy,copyButton,copyButton.closest('.line'));return;}const toggle=event.target.closest('[data-toggle]');if(toggle){const id=toggle.dataset.toggle;setSectionOpen(id,document.getElementById(id).hidden);}});
 </script>
 </body>
