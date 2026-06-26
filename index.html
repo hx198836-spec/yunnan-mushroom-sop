@@ -4,419 +4,237 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
-  <title>野生菌新客户成交话术卡｜手机客服版</title>
+  <title>新客话术卡｜野生菌客服工作台</title>
   <style>
-    :root {
-      --bg: #f6f3ea;
-      --card: #fffdfa;
-      --text: #172026;
-      --muted: #6b7280;
-      --line: #e6ded0;
-      --green: #236545;
-      --green-dark: #174a32;
-      --soft: #edf7ef;
-      --yellow: #fff4cb;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.55;
-      -webkit-text-size-adjust: 100%;
-    }
-    .top {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(246, 243, 234, 0.97);
-      backdrop-filter: blur(10px);
-      padding: max(12px, env(safe-area-inset-top)) 12px 10px;
-      border-bottom: 1px solid var(--line);
-      box-shadow: 0 3px 16px rgba(23, 32, 38, 0.08);
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      line-height: 1.25;
-      letter-spacing: 0;
-    }
-    h2 {
-      margin: 0 0 10px;
-      font-size: 19px;
-      color: var(--green-dark);
-      letter-spacing: 0;
-    }
-    h3 {
-      margin: 0;
-      font-size: 18px;
-      letter-spacing: 0;
-    }
-    main { padding: 12px 12px 28px; }
-    .opening {
-      background: var(--card);
-      border: 2px solid var(--green);
-      border-radius: 14px;
-      padding: 12px;
-    }
-    .jump {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin: 12px 0;
-    }
-    .jump a {
-      display: block;
-      min-height: 44px;
-      padding: 10px 8px;
-      border-radius: 12px;
-      background: var(--soft);
-      color: var(--green-dark);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 800;
-      text-align: center;
-      border: 1px solid #d7ebdc;
-    }
-    .section-title {
-      margin: 20px 0 10px;
-      font-size: 20px;
-      color: var(--green-dark);
-    }
-    details {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      margin: 10px 0;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(23, 32, 38, 0.04);
-      scroll-margin-top: 220px;
-    }
-    details[open] { border-color: #b7d6bf; }
-    summary {
-      min-height: 52px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 14px;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: 900;
-      color: var(--green-dark);
-      background: #fffaf1;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: "展开";
-      margin-left: auto;
-      flex: 0 0 auto;
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-    details[open] summary::after { content: "收起"; }
-    .lines { padding: 0 12px 8px; }
-    .line {
-      display: grid;
-      grid-template-columns: 1fr 78px;
-      gap: 10px;
-      align-items: stretch;
-      padding: 12px 0;
-      border-top: 1px solid var(--line);
-    }
-    .text {
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-      font-size: 18px;
-      line-height: 1.55;
-    }
-    .num {
-      color: var(--green-dark);
-      font-weight: 900;
-      margin-right: 4px;
-    }
-    .copy {
-      appearance: none;
-      border: 0;
-      border-radius: 12px;
-      background: var(--green);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 900;
-      min-height: 46px;
-      padding: 0 10px;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .copy:active { background: var(--green-dark); transform: scale(0.98); }
-    .quick-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-    .small-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 0 12px 6px;
-    }
-    .small-card h3 {
-      padding: 12px 0 2px;
-      color: var(--green-dark);
-    }
-    .tip {
-      margin: 18px 0 0;
-      padding: 12px;
-      border-radius: 12px;
-      background: var(--yellow);
-      color: #5c4616;
-      font-size: 15px;
-      line-height: 1.45;
-      text-align: center;
-    }
-    @media (min-width: 680px) {
-      body { max-width: 720px; margin: 0 auto; }
-      .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-  </style>
+    :root { --bg:#f4f6f4; --card:#fff; --text:#172026; --muted:#69737d; --line:#dde5de; --primary:#236545; --primary-dark:#174a32; --primary-soft:#eaf5ee; --warm:#fff7df; --shadow:0 10px 26px rgba(23,32,38,.08); --radius:14px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+    .page{width:min(100%,980px);margin:0 auto;padding:14px 12px calc(76px + env(safe-area-inset-bottom))}.hero{position:sticky;top:0;z-index:20;margin:0;padding:max(14px,env(safe-area-inset-top)) 12px 12px;background:rgba(244,246,244,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:0 auto 10px;width:min(100%,980px)}
+    h1{margin:0;font-size:26px;line-height:1.15;letter-spacing:0}.subtitle{margin-top:3px;color:var(--muted);font-size:14px;font-weight:700}h2{margin:0;color:var(--primary-dark);font-size:20px;line-height:1.25;letter-spacing:0}.opening{width:min(100%,980px);margin:0 auto;background:var(--card);border:2px solid var(--primary);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
+    .opening-head,.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.bulk-copy,.toggle-btn{appearance:none;border:0;border-radius:12px;background:var(--primary);color:#fff;min-height:42px;padding:0 13px;font-size:15px;font-weight:900;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}.toggle-btn{background:var(--primary-soft);color:var(--primary-dark);border:1px solid #cfe4d4}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin:12px 0;box-shadow:0 4px 14px rgba(23,32,38,.04);scroll-margin-top:170px}.search-wrap{position:sticky;top:185px;z-index:10;background:rgba(244,246,244,.94);padding:8px 0;margin:0 0 4px;backdrop-filter:blur(10px)}.search{width:100%;min-height:48px;border:2px solid var(--line);border-radius:13px;padding:0 14px;background:#fff;color:var(--text);font-size:17px;outline:none}.search:focus{border-color:var(--primary)}
+    .type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}.type-btn{appearance:none;border:1px solid #cfe4d4;border-radius:var(--radius);background:var(--card);color:var(--primary-dark);min-height:68px;padding:10px;font-size:16px;font-weight:900;text-align:left;box-shadow:0 3px 12px rgba(23,32,38,.04);cursor:pointer;-webkit-tap-highlight-color:transparent}.type-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .type-card,.quick-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin:10px 0;padding:12px;box-shadow:0 4px 14px rgba(23,32,38,.04);scroll-margin-top:170px}.type-card{display:none}.type-card.active,.type-card.search-hit{display:block}.card-title{color:var(--primary-dark);font-size:18px;font-weight:950;margin-bottom:4px}.quick-grid{display:grid;grid-template-columns:1fr;gap:10px}.collapsible-content[hidden],.search-hidden,.type-buttons-hidden{display:none!important}
+    .line{display:grid;grid-template-columns:1fr 74px;gap:10px;align-items:stretch;padding:10px 0;border-top:1px solid var(--line);transition:background .2s ease,box-shadow .2s ease}.line:first-of-type{border-top:0}.line.copied{margin-left:-8px;margin-right:-8px;padding-left:8px;padding-right:8px;border-radius:10px;background:var(--warm);box-shadow:inset 0 0 0 1px #f1d98f}.text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.55}.num{color:var(--primary-dark);font-weight:950;margin-right:5px}.copy{appearance:none;border:0;border-radius:12px;background:var(--primary);color:#fff;font-size:15px;font-weight:900;min-height:44px;padding:0 8px;cursor:pointer;-webkit-tap-highlight-color:transparent}.copy:active,.bulk-copy:active{background:var(--primary-dark);transform:scale(.98)}
+    .section-title{margin:18px 0 10px;scroll-margin-top:170px}.version{margin:22px 0 10px;text-align:center;color:var(--muted);font-size:13px;font-weight:700}.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:8px 10px max(8px,env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);backdrop-filter:blur(12px);box-shadow:0 -8px 24px rgba(23,32,38,.08)}.bottom-nav-inner{width:min(100%,980px);margin:0 auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:40px;border-radius:12px;background:var(--primary-soft);color:var(--primary-dark);text-decoration:none;font-size:14px;font-weight:900}.toast{position:fixed;left:50%;bottom:calc(70px + env(safe-area-inset-bottom));z-index:40;transform:translateX(-50%);max-width:min(88vw,420px);padding:10px 14px;border-radius:999px;background:rgba(23,32,38,.92);color:#fff;font-size:14px;font-weight:800;opacity:0;pointer-events:none;transition:opacity .2s ease;text-align:center}.toast.show{opacity:1}
+    @media (min-width:720px){body{font-size:18px}.page{padding-left:18px;padding-right:18px}.hero{padding-left:18px;padding-right:18px}.type-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.search-wrap{top:184px}.text{font-size:18px}}
+</style>
 </head>
 <body>
-  <div class="top">
-    <h1>野生菌新客户成交话术卡｜手机客服版</h1>
-    <div class="opening">
-      <h2>① 新客统一先发</h2>
-      <div id="openingLines"></div>
-    </div>
-  </div>
-
-  <main>
-    <h2 class="section-title">② 客户回复后，按情况点开</h2>
-    <div class="jump">
-      <a href="#type-a">A 云南人</a>
-      <a href="#type-b">B 第一次吃</a>
-      <a href="#type-c">C 买不到正宗</a>
-      <a href="#type-d">D 想尝鲜</a>
-      <a href="#type-e">E 家里吃</a>
-      <a href="#type-f">F 送人</a>
-      <a href="#type-g">G 想定制</a>
-      <a href="#qa">客户常问</a>
-    </div>
-
+  <div class="hero"><div class="title-row"><div><h1>新客话术卡</h1><div class="subtitle">野生菌客服工作台</div></div></div><section class="opening" id="opening"><div class="opening-head"><h2>① 新客统一先发</h2><button class="bulk-copy" type="button" id="copyOpening">一键复制开场三句</button></div><div id="openingLines"></div></section></div>
+  <main class="page">
+    <section class="panel" id="customer"><div class="section-head"><h2>② 客户回复后，按情况复制</h2></div><div class="search-wrap"><input class="search" id="searchInput" type="search" placeholder="搜索：保存 / 优惠 / 红葱 / 定制 / 加热"></div><div class="type-grid" id="typeButtons"></div></section>
     <section id="types"></section>
-
-    <h2 class="section-title">③ 按产品快速补一句</h2>
-    <section id="products" class="quick-grid"></section>
-
-    <h2 class="section-title" id="qa">④ 客户常问，直接回</h2>
-    <section id="qas" class="quick-grid"></section>
-
-    <h2 class="section-title">⑤ 推进下单</h2>
-    <section id="push" class="quick-grid"></section>
-
-    <h2 class="section-title">⑥ 成交后</h2>
-    <section id="after" class="quick-grid"></section>
-
-    <div class="tip">建议用 Safari / Chrome / Edge 打开，不建议用微信内置预览打开。</div>
+    <section class="section-title" id="products-anchor"><div class="section-head"><h2>③ 按产品快速补一句</h2><button class="toggle-btn" type="button" data-toggle="products">展开</button></div><div class="collapsible-content quick-grid" id="products" hidden></div></section>
+    <section class="section-title" id="qa-anchor"><div class="section-head"><h2>④ 客户常问，直接回</h2><button class="toggle-btn" type="button" data-toggle="qas">展开</button></div><div class="collapsible-content quick-grid" id="qas" hidden></div></section>
+    <section class="section-title" id="push-anchor"><div class="section-head"><h2>⑤ 推进下单</h2></div><div class="quick-grid" id="push"></div></section>
+    <section class="section-title" id="after-anchor"><div class="section-head"><h2>⑥ 成交后</h2></div><div class="quick-grid" id="after"></div></section>
+    <div class="version">版本：新客话术卡 v1.1｜界面优化版</div>
   </main>
-
-  <script>
-    const opening = [
-      '朋友！！你好呀',
-      '你是云南人不～吃过见手青嘛？',
-      '需要我根据您的情况给您推荐不～还是您有想吃的野生菌呀？'
-    ];
-
-    const types = [
-      ['type-a', 'A. 云南人 / 吃过菌子', [
-        '好多云南人朋友也找我买，因为自己懒得洗也怕炒不好吃就浪费了',
-        '白见手、干巴菌、牛肝菌都可以看，云南人懂呢。',
-        '白见手香、滑、鲜，拌饭拌米线都很香，熟制到手热透就能吃',
-        '我发你看看哈，先来一份/两份试试，喜欢的话我帮你留一份',
-        '我们满2包邮，满500-40，因为到了9月就没了，好多老顾客开始囤货了，今晚下单，明天炒好，48小时内顺丰冷链发货。'
-      ]],
-      ['type-b', 'B. 外地人 / 第一次吃', [
-        '见手青有红见手青，就是会见小人人的那种',
-        '你要是没吃过见手青，那我建议你先从“白见手青”开始哈～一种吃了不会见小人人的安全版见手青。',
-        '它不像红见手那么猛，但是也超级香，一入口香气就在嘴巴里炸开，我超爱吃的',
-        '我发你看看哈，先来一份/两份试试',
-        '真的拌饭一绝，我那朋友第一次吃觉得自己以前的吃的蘑菇都白吃了哈哈哈'
-      ]],
-      ['type-c', 'C. 外地人 / 吃过但买不到正宗', [
-        '我们有好多外地朋友在自己那边吃不上正宗的云南菌子也找我们买，也怕自己不会炒浪费了',
-        '您吃过的话，一定要尝尝我们家的炒好的白见手，好多老顾客说比云南餐馆炒得还好吃',
-        '我们这边是炒熟了再发的，到你那儿直接锅里一热，加点蒜小米辣，就能出锅！',
-        '我发你看看哈，您到时候看看味道咋样',
-        '我们满2包邮，满500-40，因为到了9月就没了，好多老顾客开始囤货了，今晚下单，明天炒好，48小时内顺丰冷链发货。'
-      ]],
-      ['type-d', 'D. 不知道买什么 / 想尝鲜', [
-        '需要我根据您的情况给您推荐不～还是您有想吃的野生菌呀？',
-        '没吃过见手青先从白见手开始，想吃香一点可以试干巴菌，家里拌饭也可以带鸡枞油。',
-        '白见手香、滑、鲜，干巴菌是菌王，鸡枞油拌饭很香。',
-        '我发你看看哈，先来一份/两份试试',
-        '我们满2包邮，满500-40，专门定的团货优惠。'
-      ]],
-      ['type-e', 'E. 家里人一起吃 / 想囤货', [
-        '您是想先尝尝，还是家里人一起吃？',
-        '白见手、干巴菌、鸡枞油都适合家里吃，拌饭拌米线都方便。',
-        '早上拌饭，拌米线，拌面条，煮点小青菜拌一下都巨香。',
-        '我发你看看哈，家里吃的话可以凑满500-40。',
-        '因为到了9月就没了，好多老顾客开始囤货了。'
-      ]],
-      ['type-f', 'F. 送人 / 代买', [
-        '您是自己吃还是送人呀？',
-        '送人的话，白见手和鸡枞油更稳一点。',
-        '熟制的，到手热一下就能吃，鸡枞油拌饭也方便。',
-        '我发你看看哈，您看是寄自己还是直接寄朋友那边。'
-      ]],
-      ['type-g', 'G. 不吃辣 / 不吃蒜 / 不吃猪油 / 想定制', [
-        '如果你们有不吃辣、不吃蒜、不吃猪油这些要求，可以做单独定制，但是要10份起，每份300g，单独炒一小锅。',
-        '这个可以定制，但不是一两份就能单独炒。一般10份起，每份300g，我先帮你确认这批能不能安排。',
-        '能做我再发你下单，不然怕你收到不合适。'
-      ]]
-    ];
-
-    const products = [
-      ['白见手青 / 白葱', [
-        '你要是没吃过见手青，那我建议你先从“白见手青”开始哈～一种吃了不会见小人人的安全版见手青。',
-        '白见手香、滑、鲜，拌饭拌米线都很香，熟制到手热透就能吃。'
-      ]],
-      ['红葱 / 红见手青', [
-        '红葱这个今年不零售散卖，最少5份起。这个更适合吃过、懂怎么加热的人，不太建议第一次吃的朋友只因为好奇就买。',
-        '红葱可以安排，但这个不是新客随便尝鲜款，最少5份起，收到后一定要彻底热透再吃。'
-      ]],
-      ['牛肝菌', [
-        '云南人必吃的牛肝菌，白见手。',
-        '白见手、干巴菌、牛肝菌都可以看，云南人懂呢。'
-      ]],
-      ['干巴菌', [
-        '如果想尝试特别一点的一定要试试干巴菌，干巴菌是菌王级别的存在，云南人必吃！',
-        '云南人心目中的菌王，炒饭界的天花板，最难捡最好吃的干巴菌。'
-      ]],
-      ['鸡枞 / 鸡枞油', [
-        '鸡枞油拌饭很香。',
-        '拌饭神器、香疯了、全屋飘香，开盖香出天灵盖，香晕了。'
-      ]],
-      ['口味定制', [
-        '如果你们有不吃辣、不吃蒜、不吃猪油这些要求，可以做单独定制，但是要10份起，每份300g，单独炒一小锅。',
-        '这个可以定制，但不是一两份就能单独炒。一般10份起，每份300g，我先帮你确认这批能不能安排。'
-      ]]
-    ];
-
-    const qas = [
-      ['买几份合适', '先来一份/两份试试，我们满2包邮。'],
-      ['安不安全', '我们这边是炒熟了再发的，收到后回家再加热透就能吃。'],
-      ['怎么加热', '我们这边是炒熟了再发的，到你那儿直接锅里一热，加点蒜小米辣，就能出锅！'],
-      ['怎么保存', '收货马上放冷冻，家里一定要有人收快递，顺丰1-2天，偏远地区3天马上到。'],
-      ['能不能优惠', '我们满2包邮，满500-40，专门定的团货优惠。'],
-      ['会不会再降价', '因为到了9月就没了，好多老顾客开始囤货了。'],
-      ['能不能不辣/不蒜/不用猪油', '这个可以定制，但不是一两份就能单独炒。一般10份起，每份300g，我先帮你确认这批能不能安排。'],
-      ['红葱能不能买一两份尝尝', '红葱今年不散卖，最少5份起，这个更适合吃过、懂怎么加热的人；第一次吃的话我一般建议先从白见手青开始。'],
-      ['有哪些菌子可以买', '白见手、干巴菌、鸡枞油都可以看，红葱最少5份起。']
-    ];
-
-    const push = [
-      ['发链接', '我发你看看哈。'],
-      ['客户没反应', '您是送人还是自己吃呀？'],
-      ['推荐2份', '先来一份/两份试试，我们满2包邮。'],
-      ['推荐4份', '满500-40，专门定的团货优惠。'],
-      ['客户说考虑一下', '因为到了9月就没了，好多老顾客开始囤货了。'],
-      ['当天批次有限', '今晚下单，明天炒好，48小时内顺丰冷链发货。'],
-      ['红葱5份起提醒', '红葱可以安排，但这个不是新客随便尝鲜款，最少5份起，收到后一定要彻底热透再吃。'],
-      ['定制10份起提醒', '这个可以定制，但不是一两份就能单独炒。一般10份起，每份300g，我先帮你确认这批能不能安排。']
-    ];
-
-    const after = [
-      ['下单感谢', '收到您的订单啦～我们今天洗好炒好，明天顺丰冷链发货。'],
-      ['保存提醒', '收货马上放冷冻，家里一定要有人收快递，顺丰1-2天，偏远地区3天马上到。'],
-      ['到货反馈', '你收到后尝尝看，喜欢的话跟我说一声。']
-    ];
-
-    function line(text, i) {
-      const row = document.createElement('div');
-      row.className = 'line';
-      const content = document.createElement('div');
-      content.className = 'text';
-      if (i) {
-        const num = document.createElement('span');
-        num.className = 'num';
-        num.textContent = i + '.';
-        content.append(num, document.createTextNode(text));
-      } else {
-        content.textContent = text;
-      }
-      const button = document.createElement('button');
-      button.className = 'copy';
-      button.type = 'button';
-      button.textContent = '复制';
-      button.dataset.copy = text;
-      row.append(content, button);
-      return row;
-    }
-
-    function renderLines(el, lines) {
-      lines.forEach((text, idx) => el.appendChild(line(text, idx + 1)));
-    }
-
-    function renderDetails(container, items, openFirst) {
-      items.forEach(([id, title, lines], index) => {
-        const details = document.createElement('details');
-        details.id = id;
-        if (openFirst && index === 0) details.open = true;
-        const summary = document.createElement('summary');
-        summary.textContent = title;
-        const wrap = document.createElement('div');
-        wrap.className = 'lines';
-        renderLines(wrap, lines);
-        details.append(summary, wrap);
-        container.appendChild(details);
-      });
-    }
-
-    function renderSmall(container, items) {
-      items.forEach(([title, lines]) => {
-        const card = document.createElement('div');
-        card.className = 'small-card';
-        const h = document.createElement('h3');
-        h.textContent = title;
-        card.appendChild(h);
-        (Array.isArray(lines) ? lines : [lines]).forEach((text) => card.appendChild(line(text)));
-        container.appendChild(card);
-      });
-    }
-
-    async function copyText(text, button) {
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch (err) {
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-      }
-      const old = button.textContent;
-      button.textContent = '已复制';
-      setTimeout(() => { button.textContent = old; }, 1000);
-    }
-
-    renderLines(document.getElementById('openingLines'), opening);
-    renderDetails(document.getElementById('types'), types, true);
-    renderSmall(document.getElementById('products'), products);
-    renderSmall(document.getElementById('qas'), qas);
-    renderSmall(document.getElementById('push'), push);
-    renderSmall(document.getElementById('after'), after);
-
-    document.addEventListener('click', (event) => {
-      const button = event.target.closest('button.copy');
-      if (button) copyText(button.dataset.copy, button);
-    });
-  </script>
+  <nav class="bottom-nav" aria-label="快捷导航"><div class="bottom-nav-inner"><a href="#customer">客户类型</a><a href="#products-anchor">产品</a><a href="#qa-anchor">常问</a><a href="#push-anchor">下单</a><a href="#after-anchor">成交后</a></div></nav>
+  <div class="toast" id="toast">请长按手动复制</div>
+  <script>const opening = [
+      "朋友！！你好呀",
+      "你是云南人不～吃过见手青嘛？",
+      "需要我根据您的情况给您推荐不～还是您有想吃的野生菌呀？"
+];
+const types = [
+      [
+            "type-a",
+            "A. 云南人 / 吃过菌子",
+            "A 云南人",
+            [
+                  "好多云南人朋友也找我买，因为自己懒得洗也怕炒不好吃就浪费了",
+                  "白见手、干巴菌、红见手都可以看，云南人懂呢。",
+                  "白见手香、滑、嫩，拌饭超级香，是已经炒熟了的，到手热透就能吃"
+            ]
+      ],
+      [
+            "type-b",
+            "B. 外地人 / 第一次吃",
+            "B 第一次吃",
+            [
+                  "见手青有红见手青，就是会见小人人的那种",
+                  "你要是没吃过见手青，那我建议你先从“白见手青”开始哈～一种吃了不会见小人人的安全版见手青。",
+                  "它不像红见手那么猛，但是也超级香，一入口香气就在嘴巴里炸开，我超爱吃的",
+                  "真的拌饭一绝，我外地的朋友第一次都会吃觉得自己以前的吃的蘑菇都白吃了哈哈哈"
+            ]
+      ],
+      [
+            "type-c",
+            "C. 外地人 / 吃过但买不到正宗",
+            "C 买不到正宗",
+            [
+                  "我们有好多外地朋友吃不上正宗的云南菌子都找我们买，也怕自己不会炒浪费了",
+                  "您吃过的话，一定要尝尝我们家的炒好的白见手，好多老顾客说比云南餐馆炒得还好吃",
+                  "我们这边是炒熟了再发的，到你那儿直接锅里一热，加点蒜小米辣，就能出锅！"
+            ]
+      ],
+      [
+            "type-d",
+            "D. 不知道买什么 / 想尝鲜",
+            "D 想尝鲜",
+            [
+                  "需要我根据您的情况给您推荐不～还是您有想吃的野生菌呀？",
+                  "没吃过见手青先从白见手开始，想吃香一点可以试干巴菌，家里拌饭也可以带鸡枞油。",
+                  "白见手香、滑、鲜，干巴菌是菌王，鸡枞油拌饭很香。"
+            ]
+      ],
+      [
+            "type-e",
+            "E. 家里人一起吃 / 想囤货",
+            "E 家里吃/囤货",
+            [
+                  "您是想先尝尝，还是家里人一起吃？",
+                  "白见手、干巴菌、鸡枞油都适合家里吃，拌饭、吃米线都方便。",
+                  "早上拌饭，拌米线，拌面条，煮点小青菜拌一下都巨香。"
+            ]
+      ],
+      [
+            "type-f",
+            "F. 送人 / 代买",
+            "F 送人/代买",
+            [
+                  "您是自己吃还是送人呀？",
+                  "送人的话，白见手和干巴菌更稳一点。",
+                  "熟制的，到手热一下就能吃，超级方便。"
+            ]
+      ],
+      [
+            "type-g",
+            "G. 不吃辣 / 不吃蒜 / 不吃猪油 / 想定制",
+            "G 想定制",
+            [
+                  "如果是不吃辣、不吃蒜、不吃猪油，或者有其他别的要求，可以做单独定制，但是要10份起，每份300g，单独炒一小锅。"
+            ]
+      ]
+];
+const products = [
+      [
+            "白见手青 / 白葱",
+            [
+                  "你要是没吃过见手青，那我建议你先从“白见手青”开始哈～一种吃了不会见小人人的安全版见手青。",
+                  "白见手香、滑、鲜，拌饭拌米线都很香，熟制到手热透就能吃。"
+            ]
+      ],
+      [
+            "红见手青 / 红葱",
+            [
+                  "红葱今年不零售散卖，最少5份起。因为好多外地朋友就是好奇想试试，如果没经验没热透的话，买回去闹翻了就麻烦了，所以不太建议第一次吃的朋友只因为好奇就买。",
+                  "红葱可以安排，但这个不是新客随便尝鲜款，最少5份起，收到后一定要彻底热透再吃。"
+            ]
+      ],
+      [
+            "牛肝菌",
+            [
+                  "云南人必吃的牛肝菌，白见手。",
+                  "白葱、红葱、黄牛肝都可以看，云南人懂呢。"
+            ]
+      ],
+      [
+            "干巴菌",
+            [
+                  "如果想尝试特别一点的一定要试试干巴菌，干巴菌是菌王级别的存在，云南人必吃！",
+                  "云南人心目中的菌王，炒饭界的天花板，最难捡也是最好吃的干巴菌。"
+            ]
+      ],
+      [
+            "鸡枞 / 鸡枞油",
+            [
+                  "鸡枞油拌饭很香。",
+                  "拌饭神器、香疯了，开盖香出天灵盖，直接被香晕了。"
+            ]
+      ]
+];
+const qas = [
+      [
+            "买几份合适",
+            "先来一两份试试，我们满2件包邮是最划算的。"
+      ],
+      [
+            "安不安全",
+            "我们这边是炒熟了再发的，收到后回家再加热透就能吃。"
+      ],
+      [
+            "怎么加热",
+            "稍等我会发食用指南给您，按指南操作就行"
+      ],
+      [
+            "怎么保存",
+            "收货马上放冷冻，家里一定要有人收快递，顺丰冷脸1-2天基本就到了，偏远地区3-4天。"
+      ],
+      [
+            "能不能优惠",
+            "我们的优惠活动是满2包邮，满500-40，满1000-100。"
+      ],
+      [
+            "会不会再降价",
+            "今年菌子基本就这个价格了，因为到9月份就没了，好多老顾客已经开始囤货了。"
+      ],
+      [
+            "能不能不辣/不蒜/不用猪油",
+            "这个可以定制，但得10份起炒一小锅，每份300g，我先帮你确认这批能不能安排。"
+      ],
+      [
+            "红葱能不能买一两份尝尝",
+            "红葱今年不散卖，最少5份起，这个更适合吃过、懂怎么炒熟的人；第一次吃的话我一般建议先从白见手青开始。"
+      ],
+      [
+            "有哪些菌子可以买",
+            "白见手、干巴菌这些都可以看，红葱最少5份起。"
+      ]
+];
+const push = [
+      [
+            "发链接",
+            "我发你看看哈。"
+      ],
+      [
+            "客户没反应",
+            "您是送人还是自己吃呀？"
+      ],
+      [
+            "推荐2份",
+            "可以先少买点，来两份试试，我们满2件包邮。"
+      ],
+      [
+            "推荐4份",
+            "满500-40，这个是我家最多顾客选的了，2包干巴菌1包白葱应该就能到了。"
+      ],
+      [
+            "客户说考虑一下",
+            "因为菌子到了9月就没了，而且六七八三个月是菌子最好的时候，好多老顾客已经开始囤货了。"
+      ],
+      [
+            "当天批次有限",
+            "今晚下单，明天炒好，48小时内顺丰冷链发货。"
+      ]
+];
+const after = [
+      [
+            "下单感谢",
+            "收到您的订单啦～我们今天就洗好做好，争取明天顺丰冷链发出来。"
+      ],
+      [
+            "保存提醒",
+            "收货马上放冷冻，家里一定要有人收快递，顺丰冷链一般是1-2天到，偏远地区3天。"
+      ],
+      [
+            "到货反馈",
+            "你收到后尝尝看，喜欢的话跟我说一声。"
+      ]
+];
+    const state={activeType:null,query:''};const toast=document.getElementById('toast');
+    function makeLine(text,index){const row=document.createElement('div');row.className='line';row.dataset.text=text;const content=document.createElement('div');content.className='text';if(index){const num=document.createElement('span');num.className='num';num.textContent=index+'.';content.append(num,document.createTextNode(text));}else{content.textContent=text;}const button=document.createElement('button');button.className='copy';button.type='button';button.textContent='复制';button.dataset.copy=text;row.append(content,button);return row;}
+    function renderLines(container,lines,numbered=false){lines.forEach((text,idx)=>container.appendChild(makeLine(text,numbered?idx+1:null)));}
+    function renderTypes(){const buttonBox=document.getElementById('typeButtons');const cardBox=document.getElementById('types');types.forEach(([id,title,shortTitle,lines])=>{const button=document.createElement('button');button.className='type-btn';button.type='button';button.textContent=shortTitle;button.dataset.target=id;buttonBox.appendChild(button);const card=document.createElement('section');card.className='type-card';card.id=id;card.dataset.search=[title,shortTitle,...lines].join(' ');const h=document.createElement('div');h.className='card-title';h.textContent=title;card.appendChild(h);renderLines(card,lines,true);cardBox.appendChild(card);});}
+    function renderQuick(containerId,items){const container=document.getElementById(containerId);items.forEach(([title,lines])=>{const card=document.createElement('section');card.className='quick-card';card.dataset.search=[title,...(Array.isArray(lines)?lines:[lines])].join(' ');const h=document.createElement('div');h.className='card-title';h.textContent=title;card.appendChild(h);(Array.isArray(lines)?lines:[lines]).forEach(text=>card.appendChild(makeLine(text)));container.appendChild(card);});}
+    function setActiveType(id){state.activeType=state.activeType===id?null:id;document.querySelectorAll('.type-btn').forEach(button=>button.classList.toggle('active',button.dataset.target===state.activeType));document.querySelectorAll('.type-card').forEach(card=>card.classList.toggle('active',card.id===state.activeType&&!state.query));if(state.activeType&&!state.query)document.getElementById(state.activeType).scrollIntoView({behavior:'smooth',block:'start'});}
+    function setSectionOpen(id,open){const content=document.getElementById(id);const button=document.querySelector(`[data-toggle="${id}"]`);content.hidden=!open;if(button)button.textContent=open?'收起':'展开';}
+    function applySearch(query){state.query=query.trim().toLowerCase();const searching=Boolean(state.query);document.getElementById('typeButtons').classList.toggle('type-buttons-hidden',searching);document.querySelectorAll('.type-card').forEach(card=>{const hit=searching&&card.dataset.search.toLowerCase().includes(state.query);card.classList.toggle('search-hit',hit);card.classList.toggle('active',!searching&&card.id===state.activeType);});['products','qas'].forEach(id=>{if(searching)setSectionOpen(id,true);});document.querySelectorAll('.quick-card').forEach(card=>{const hit=!searching||card.dataset.search.toLowerCase().includes(state.query);card.classList.toggle('search-hidden',!hit);});}
+    function showToast(message){toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1400);}
+    async function copyText(text,button,row){let ok=false;try{await navigator.clipboard.writeText(text);ok=true;}catch(err){try{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.focus();ta.select();ok=document.execCommand('copy');document.body.removeChild(ta);}catch(fallbackErr){ok=false;}}if(!ok){showToast('请长按手动复制');return;}const old=button.textContent;button.textContent='已复制';if(row){row.classList.add('copied');setTimeout(()=>row.classList.remove('copied'),1000);}setTimeout(()=>{button.textContent=old;},1000);}
+    renderLines(document.getElementById('openingLines'),opening,true);renderTypes();renderQuick('products',products);renderQuick('qas',qas);renderQuick('push',push);renderQuick('after',after);
+    document.getElementById('copyOpening').addEventListener('click',event=>copyText(opening.map((text,idx)=>`${idx+1}. ${text}`).join('\n'),event.currentTarget,document.getElementById('opening')));document.getElementById('typeButtons').addEventListener('click',event=>{const button=event.target.closest('.type-btn');if(button)setActiveType(button.dataset.target);});document.getElementById('searchInput').addEventListener('input',event=>applySearch(event.target.value));document.addEventListener('click',event=>{const copyButton=event.target.closest('button.copy');if(copyButton){copyText(copyButton.dataset.copy,copyButton,copyButton.closest('.line'));return;}const toggle=event.target.closest('[data-toggle]');if(toggle){const id=toggle.dataset.toggle;setSectionOpen(id,document.getElementById(id).hidden);}});
+</script>
 </body>
 </html>
