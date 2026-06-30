@@ -79,9 +79,9 @@
       "title": "C. 外地人吃过",
       "lines": [
         "我们有好多外地朋友离开云南之后一直念念不忘！但是又怕吃不上正宗又安全的云南菌子都找我们买～吃一口立马回到云南！",
-        "亲爱的你之前吃的是炒见手青吗，一般饭馆里180一盘的见手青都是白见手，因为安全一点[偷笑]，还有一种是红见手，是炒熟了没热好，或者是放冷了吃都可能中毒",
+        "亲爱的你之前吃的是炒见手青吗，一般饭馆里180一盘的见手青都是白见手，因为安全一点，还有一种是红见手，是炒熟了没热好，或者是放冷了吃都可能中毒",
         "之前你觉得菌子火锅都好吃的话，那你吃爆炒见手青会好吃到疯掉！！在云南好吃的菌子必须拿来爆炒！一点水也不加！火锅的菌子一般都是杂菌，那个香味比不上爆炒见手青的100分之一",
-        "干巴菌是云南人心目中的菌王，你在云南180一份的炒饭，用我们的可以炒5份！那个香气是咬下去一下子炸开的，很复杂的香气，但是很多外地人吃不惯，你先吃吃白见手，尝尝，实在猎奇就可以试试干巴菌，那个香气没有任何的香气可以去形容，只有亲口吃了才知道",
+        "干巴菌是云南人心目中的菌王，你在云南180一份的炒饭，用我们的至少能炒三大碗出来！那个香气是咬下去一下子炸开的，很复杂的香气，但是很多外地人吃不惯，你先吃吃白见手，尝尝，实在猎奇就可以试试干巴菌，那个香气没有任何的香气可以去形容，只有亲口吃了才知道",
         "白见手、干巴菌、鸡枞油都适合家里吃，拌饭、吃米线都方便。早上拌饭，拌米线，拌面条，煮点小青菜拌一下都巨香。"
       ]
     }
@@ -100,7 +100,7 @@
       "lines": [
         "炒菌都是300g一袋，炒熟了真空包装好，实打实的成品分量。一袋够两三个人吃一顿",
         "野生菌本身损耗和丢头就大、炒了以后还会再缩水，一公斤菌子洗好炒好也就只剩个四五两。而且最费工费时的是洗菌子处理菌子，特别是洗干巴菌、一洗一个不吱声",
-        "外面干巴菌盖饭都卖到150一碗了，你在我这拿一盒怕是能炒三碗出来！  我真的建议你试试，吃完你就知道这300g是有多扎实"
+        "外面干巴菌盖饭都卖到150一碗了，你在我这拿一盒至少能炒三碗出来！  我真的建议你试试，吃完你就知道这300g是有多扎实"
       ]
     },
     {
@@ -164,7 +164,7 @@
       bindHeadToggle(head,()=>{card.classList.contains('collapsed')?expand():collapse()});
       card._collapse=collapse;card._expand=expand;return card}
 
-    function defaultState(){setModuleCollapsed($('#opening'),false);setModuleCollapsed($('#customers'),false);setModuleCollapsed($('#qa'),false);$$('.customer-block').forEach(card=>card._expand&&card._expand());$$('.qa-block').forEach(card=>card._expand&&card._expand());$$('.searchable,.searchable-block,.section').forEach(el=>el.classList.remove('hidden'));$('#empty').style.display='none'}
+    function defaultState(){setModuleCollapsed($('#opening'),false);setModuleCollapsed($('#customers'),false);setModuleCollapsed($('#qa'),false);$$('.customer-block').forEach(card=>card._collapse&&card._collapse());$$('.qa-block').forEach(card=>card._collapse&&card._collapse());$$('.searchable,.searchable-block,.section').forEach(el=>el.classList.remove('hidden'));$('#empty').style.display='none'}
     function build(){renderLines($('#openingLines'), data.opening);data.customers.forEach(c=>$('#customerCards').append(makeCustomerCard(c)));data.qa.forEach(g=>$('#qaGroups').append(makeQaCard(g)));defaultState()}
     function runSearch(q){const query=q.trim().toLowerCase();if(!query){defaultState();return}setModuleCollapsed($('#customers'),false);setModuleCollapsed($('#qa'),false);let found=0;$$('.searchable').forEach(el=>{const hit=el.dataset.text.includes(query);el.classList.toggle('hidden',!hit);if(hit)found++});$$('.searchable-block').forEach(el=>{const hit=el.dataset.text.includes(query);el.classList.toggle('hidden',!hit);if(hit){found++;if(el._expand)el._expand()}});$('#empty').style.display=found?'none':'block'}
 
