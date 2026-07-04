@@ -4,151 +4,232 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17684f">
-  <title>野生菌新客户成交话术卡</title>
+  <title>销售话术卡 V5</title>
   <style>
-    :root{--bg:#f4f7f5;--card:#fff;--text:#17231e;--muted:#65736c;--line:#d7e1dc;--main:#17684f;--soft:#e7f2ec;--hit:#fff1a8;--shadow:0 3px 12px rgba(25,50,40,.06)}
-    *{box-sizing:border-box}html{overflow-x:hidden}body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--text);font:15.5px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button,input{font:inherit}button{touch-action:manipulation;cursor:pointer}
-    .shell{max-width:1180px;margin:auto;padding:7px 9px 30px}.brand{font-size:16px;line-height:1.15;margin:0 0 5px;font-weight:850}
-    .search{width:100%;border:1px solid #b8c7c0;border-radius:8px;background:#fff;padding:7px 9px;font-size:14.5px;outline:none;margin:4px 0 1px}.search:focus{border-color:var(--main);box-shadow:0 0 0 3px rgba(23,104,79,.12)}
-    .section{margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:9px;box-shadow:var(--shadow);overflow:hidden}.section-head{position:relative;display:flex;align-items:center;justify-content:center;min-height:48px;padding:9px 42px;background:var(--soft);border-bottom:1px solid var(--line);cursor:pointer;user-select:none}.section-head:hover{background:#deede5}.section-title{margin:0;text-align:center;font-size:21px;line-height:1.25;font-weight:900;word-spacing:.45em}.section-head .chev{position:absolute;right:14px;color:var(--main);font-size:20px;font-weight:900}.section-body{padding:8px}.section.collapsed>.section-body{display:none}.section.collapsed>.section-head{border-bottom:0}
-    .groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.section:nth-of-type(1) .groups,.section:nth-of-type(2) .groups{grid-template-columns:1fr}
-    .subcard{background:#fbfcfb;border:1px solid var(--line);border-radius:8px;overflow:hidden;min-width:0}.subhead{position:relative;display:flex;align-items:center;justify-content:center;min-height:42px;padding:8px 36px;background:#fff;cursor:pointer;user-select:none}.subhead:hover{background:#f2f7f4}.subhead h3{font-size:16.5px;line-height:1.25;text-align:center;margin:0;font-weight:850}.subhead .chev{position:absolute;right:11px;color:var(--main);font-size:17px;font-weight:850}.subbody{padding:7px;border-top:1px solid var(--line)}.subcard.collapsed .subbody{display:none}
-    .lines{display:grid;gap:6px}.line{display:flex;align-items:flex-start;gap:7px;border:1px solid var(--line);border-radius:7px;background:#fff;padding:7px 7px 7px 9px;transition:background .2s,border-color .2s}.line-text{flex:1;white-space:pre-line;overflow-wrap:anywhere;word-break:break-word;min-width:0}.copy{flex:0 0 auto;border:0;border-radius:7px;background:var(--main);color:#fff;font-weight:800;min-width:46px;min-height:31px;padding:4px 8px;font-size:13.5px}.line.flash{background:var(--hit);border-color:#dfbf32}
-    .empty{display:none;text-align:center;color:var(--muted);background:#fff;border:1px dashed #b9c7c0;border-radius:9px;padding:16px;margin:10px 0}.hidden{display:none!important}
-    @media(max-width:900px){.groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:650px){body{font-size:14.5px}.shell{padding:6px 7px 24px}.brand{font-size:15.5px}.section{margin-top:7px}.section-head{min-height:44px;padding:8px 38px}.section-title{font-size:19px}.section-body{padding:7px}.groups{grid-template-columns:1fr;gap:6px}.subhead{min-height:40px;padding:7px 34px}.subhead h3{font-size:15.5px}.line{padding:6px 6px 6px 8px}.copy{min-width:45px;min-height:30px}}
+    :root{--bg:#eef3f0;--surface:#fff;--surface-2:#f7faf8;--ink:#17231e;--muted:#69756f;--line:#d5dfda;--main:#17684f;--main-soft:#e4f0e9;--active:#d5e9de;--flash:#fff3b5}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;overflow-x:hidden}body{background:var(--bg);color:var(--ink);font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button{font:inherit;touch-action:manipulation}
+    .app{height:100dvh;max-width:1440px;margin:auto;padding:7px;display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:6px}.brand{margin:0;font-size:15px;line-height:1.1;font-weight:850}
+    .opening,.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;min-width:0}.opening{padding:5px}.section-label,.panel-title{margin:0 0 4px;font-size:14px;line-height:1.15;font-weight:850;color:var(--main)}.panel-title{padding:7px 7px 2px}
+    .opening-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.index-list{display:grid;gap:4px}.index-item{display:flex;align-items:center;gap:5px;min-width:0;background:var(--surface-2);border-radius:6px;padding:4px}.index-name{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);padding:4px 5px;text-align:left;font-weight:700;cursor:pointer;overflow-wrap:anywhere}.index-name:hover{color:var(--main)}.copy{flex:0 0 auto;border:0;border-radius:6px;background:var(--main);color:#fff;min-width:43px;min-height:27px;padding:3px 7px;font-size:12px;font-weight:800;cursor:pointer}.index-item.flash{background:var(--flash)}
+    .mobile-main-tabs{display:none}.workspace{min-height:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,13fr);gap:6px}.panel{display:grid;grid-template-rows:auto auto minmax(0,1fr);overflow:hidden}.tabs{display:flex;gap:4px;padding:0 6px 6px;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{flex:1;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);padding:5px 6px;font-size:12px;font-weight:750;white-space:nowrap;cursor:pointer}.tab.active{border-color:#8db09f;background:var(--active);color:#0f513d}.panel-body{min-height:0;overflow:auto;padding:0 6px 6px;scrollbar-gutter:stable}.qa-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 6px 7px}.qa-tabs .tab{width:100%;min-width:0;min-height:35px;display:flex;align-items:center;justify-content:center;white-space:normal;line-height:1.15;text-align:center} 
+    .drawer-layer{position:fixed;inset:0;z-index:50;display:none;background:rgba(11,28,21,.32)}.drawer-layer.open{display:block}.drawer{position:absolute;top:0;right:0;width:min(430px,92vw);height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:#fff;box-shadow:-8px 0 28px rgba(12,35,27,.18);padding:14px}.drawer-head{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:9px}.drawer-title{flex:1;margin:0;font-size:16px}.close{border:0;background:var(--main-soft);color:var(--main);border-radius:6px;min-width:34px;min-height:30px;font-size:18px;cursor:pointer}.drawer-text{overflow:auto;white-space:pre-line;overflow-wrap:anywhere;font-size:15px;line-height:1.65;padding:13px 1px}.drawer-copy{border:0;border-radius:7px;background:var(--main);color:#fff;min-height:40px;font-weight:850;cursor:pointer}
+    @media(max-width:760px){body{font-size:13.5px}.app{height:auto;min-height:100dvh;padding:6px;display:block}.brand{margin-bottom:5px}.opening{margin-bottom:6px}.opening-grid{grid-template-columns:1fr;gap:3px}.mobile-main-tabs{display:flex;gap:5px;margin-bottom:6px}.mobile-main-tabs .tab{min-height:34px}.workspace{display:block}.panel{display:none;grid-template-rows:auto auto auto;overflow:visible;margin-bottom:6px}.panel.mobile-active{display:grid}.panel-body{overflow:visible}.qa-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.qa-tabs .tab{min-height:38px}.drawer{top:auto;bottom:0;width:100%;height:min(72dvh,620px);border-radius:14px 14px 0 0;padding:12px}.drawer-title{font-size:15px}.drawer-text{font-size:14.5px}}
   </style>
 </head>
 <body>
-  <main class="shell">
+  <main class="app">
     <h1 class="brand">销售话术卡</h1>
-    <input class="search" id="search" type="search" placeholder="搜索：保存 / 优惠 / 红葱 / 定制 / 加热" autocomplete="off">
-    <div id="sections"></div>
-    <div class="empty" id="empty">没有找到相关话术</div>
+    <section class="opening">
+      <h2 class="section-label">① 新客进线</h2>
+      <div class="opening-grid" id="opening"></div>
+    </section>
+    <div class="mobile-main-tabs" aria-label="工作区切换">
+      <button class="tab active" data-pane="customers" type="button">客户分类</button>
+      <button class="tab" data-pane="qa" type="button">高频Q&A</button>
+    </div>
+    <div class="workspace">
+      <section class="panel customer-panel mobile-active" id="customers-panel">
+        <h2 class="panel-title">② 客户分类</h2>
+        <div class="tabs" id="customer-tabs"></div>
+        <div class="panel-body"><div class="list" id="customer-list"></div></div>
+      </section>
+      <section class="panel qa-panel" id="qa-panel">
+        <h2 class="panel-title">③ 高频Q&A</h2>
+        <div class="qa-tabs" id="qa-tabs"></div>
+        <div class="panel-body"><div class="index-list" id="qa-list"></div></div>
+      </section>
+    </div>
   </main>
+  <div class="drawer-layer" id="drawer-layer" aria-hidden="true">
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <header class="drawer-head"><h2 class="drawer-title" id="drawer-title"></h2><button class="close" id="drawer-close" type="button" aria-label="关闭">×</button></header>
+      <div class="drawer-text" id="drawer-text"></div>
+      <button class="drawer-copy" id="drawer-copy" type="button">复制完整话术</button>
+    </aside>
+  </div>
   <script>
     const data={
-  "sections": [
-    {
-      "title": "① 新客统一发",
-      "groups": [
-        {
-          "title": "话术（2）",
-          "lines": [
-            "朋友你好呀！！您是耐毒的云南小老乡，还是不耐毒的外省小伙伴？",
-            "哈哈是想吃见手青吗～还是有其他想吃的野生菌呀？"
-          ]
-        }
+  "content": {
+    "opening": [
+      "朋友你好呀！！您是耐毒的云南小老乡，还是不耐毒的外省小伙伴？",
+      "哈哈是想吃见手青吗～还是有其他想吃的野生菌呀？",
+      "亲爱的，我把小店的链接发给你，微信长按扫码就能进店选购啦。有空时也可以看下我朋友圈，新鲜菌子上来了我都会第一时间通知大家"
+    ],
+    "customers": [
+      {
+        "title": "A. 云南人",
+        "lines": [
+          "那就不用我多介绍了哈哈！我们是楚雄的见手青，山里直接收的，有红葱和白葱，昆明曲靖的老表们喊红见手和白见手。黄牛肝和黑牛肝最近也都上了",
+          "好多云南朋友也找我买，怕买到假的 、买来不会做的，还有懒得自己整的，哈哈，都说我家炒的比馆子的还好吃",
+          "送人的话，白葱、黑牛肝、干巴菌这些要稳一点。安全、不会闹翻掉，而且买回去热一下就能吃，超级方便"
+        ]
+      },
+      {
+        "title": "B. 外地没吃过",
+        "lines": [
+          "见手青里最好吃的、最顶级的就两种：红葱和白葱\n1️⃣白见手青～我们云南叫白葱，炒熟了不会见小人人的安全版见手青\n2️⃣红见手青，也叫红葱，即使炒熟了没热透也会见小人人的见手青",
+          "您想试试挑战一点的还是安全的哈哈哈",
+          "我建议可以试试我家的白见手，能打开新世界的大门，觉得以前的菌子全部白吃了！！感觉十只鸡炖的汤都没有它鲜！吃起来奶香奶香的，口感脆嫩爽滑，是我们家的王牌飞行员！而且最重要的是还安全"
+        ]
+      },
+      {
+        "title": "C. 外地人吃过",
+        "lines": [
+          "好多外地朋友离开云南之后一直念念不忘！但是又怕吃不上正宗又安全的云南菌子，都来找我们买～吃一口立马回到云南！",
+          "亲爱的之前吃的是炒见手青吗？如果是觉得菌子火锅都好吃的话，那你吃爆炒见手青会好吃到疯掉！！在云南好吃的菌子必须拿来爆炒！一点水也不加！火锅的菌子一般都是杂菌，那个香味比不上爆炒见手青的100分之一",
+          "干巴菌，云南人心目中的菌王！！那个香气是咬下去一下子炸开的，很复合的香气，没有任何其他菌子可以相提并论，只有亲口吃了才知道"
+        ]
+      }
+    ],
+    "qa": [
+      {
+        "title": "红葱 / 定制 / 鲜货",
+        "lines": [
+          "今年红葱不零售散卖，只5袋5袋的卖，因为红葱是有毒的，我是怕外地客户万一没热透、吃了闹翻掉就麻烦大了，所以基本上都是我家老顾客才会买来吃。红葱虽然是炒熟了的，但凉了以后毒性会恢复，如果没热透、吃了还是会中毒，老人小孩孕妇、体质弱的人都不建议吃",
+          "如果是不吃辣、不吃蒜、不吃猪油，或者有其他别的要求，今年可以做单独定制了，师傅单独开小灶炒一小锅。但是要10袋起，每袋300g",
+          "纯野生的菌子，只要没泡过药水的，挖出来当天就必须处理完，不然很快就长虫烂掉了，我做了7年野生菌了，一开始就是卖鲜货，因为物流坏损赔了很多钱，所以后面干脆做炒好的"
+        ]
+      },
+      {
+        "title": "分量/口味",
+        "lines": [
+          "牛肝菌吃起来都是脆嫩爽滑的，只是香味类型略有不同：有的人喜欢白葱，像个小姑娘奶香奶香的，有的人喜欢红葱，像个男子汉霸道浓郁，这两个都是见手青里的顶流；其他牛肝菌里，黄牛肝吃起来是最脆的，黑牛肝吃起来是最有肉感的，这就看个人口味了",
+          "炒菌都是300g一袋，可以炒一大盘出来、够两三个人吃一顿了，这个是炒熟了以后的量。一公斤新鲜菌子，挑挑洗洗炒炒，也就只剩个四五两了",
+          "我们家的菌子是大厨炒熟了再发的，炒的时候放了一点点辣椒、大蒜还有盐巴，三岁小朋友都可以吃的那种。您收到后回锅炒一炒，爱吃辣的就放点蒜+小米辣，热透了就能吃啦，方便又美味",
+          "在云南一两百块一份的炒饭，我家的一份至少能炒三大碗出来！  我真的建议你试试，吃完你就知道这300g是有多扎实"
+        ]
+      },
+      {
+        "title": "价格",
+        "lines": [
+          "稍等，我把小店链接发给您，方便随时看品种和价格。长按二维码就能进店选购了，满减和满赠活动也都是设置好了的",
+          "今年菌子基本就这个价格了，现在是菌子最多最好的时候，到9月份开始落潮，好多老顾客都已经开始囤货了",
+          "卖真野生菌的，我家是性价比最高的，差不多是云南本地馆子5-7折的价格；卖假人工菌的，我家是真比不过价格哈哈。我们以前有顾客试过，去木水花买回来自己做，最后吃下来比从我们家买还贵一半，因为这些野生菌市场上面的零售价本身就比我们拿货价要贵很多，而且品质没有我们好、所以丢头更大"
+        ]
+      },
+      {
+        "title": "优惠",
+        "lines": [
+          "亲爱的，你先少买两份尝尝，别买太多，觉得好吃了再来，保证你吃完就想无限复购哈哈",
+          "现在优惠活动是任意2袋包邮（偏远地区需补运费差价），满500-40，满1000-100。私人订制是10袋送1袋，20袋送3袋，比较适合囤货",
+          "亲爱的，您体谅体谅我这就是个小本生意，卖一单就赚个10块8块的。要不这样，我再给您优惠20块，您看可以不？您之后帮我发发朋友圈宣传宣传、介绍些新朋友。一会儿您下单了先别急着支付，我去后台改价然后再喊你",
+          "亲爱的实在抱歉，您看这样好不好？下次您下单前记得喊我一声，我给您优惠20块，钱不多但也是我的一点小心意"
+        ]
+      },
+      {
+        "title": "品质",
+        "lines": [
+          "我们家炒菌子炒了七年了，做的都是老顾客回头的生意，靠的就是货真价实、薄利多销。菌子都是我哥蹲在楚雄一个山头一个山头去收回来的。不泡药水不掺假，只挑精品菌子拿来炒，您只要尝一次就知道了，嘴巴不会骗人的",
+          "野生菌本身损耗和丢头就大、炒了以后还会再缩水，而且最费工费时的是洗菌子处理菌子，一洗一个不吱声。",
+          "这两年经济环境不好，好些卖猪肉的卖皮鞋的也都跑了来卖菌子，本地的外省的、野生的人工的、不同品种的菌子都掺在一起卖，有些卖的价格比我们从山里收的成本还低，我是宁可关门不做生意也不会弄虚作假倒牌子"
+        ]
+      },
+      {
+        "title": "售后",
+        "lines": [
+          "后台看到您的订单啦，亲爱的稍等，我给你发食用指南和注意事项",
+          "等菌子到了一定要放进冰冻哈～不是放冷藏，冷冻保存可以放三个月左右。吃的时候用锅加热，不要用微波炉。如果实在担心，可以吃之前喝一点牛奶～",
+          "我给您安排刚收的品质最好的这一批，炒好后需要晾凉了、冻一晚上，明天就顺丰冷链给您发出去。一般是发货后1-2天到，偏远地区3天",
+          "您尝尝鲜，喜欢吃的话跟我说一声。欢迎推荐新朋友来加我微信买菌子，您推荐的新朋友首单可以减20，买完菌子后您下次回购我再给您减20"
+        ]
+      }
+    ]
+  },
+  "labels": {
+    "opening": [
+      "云南人还是外省人",
+      "想吃见手青还是其他菌子",
+      "发送小店链接和朋友圈提醒"
+    ],
+    "customers": {
+      "A. 云南人": [
+        "楚雄见手青和品种介绍",
+        "为什么云南人也来找我买",
+        "送人推荐哪些菌子"
+      ],
+      "B. 外地没吃过": [
+        "红葱和白葱有什么区别",
+        "想吃安全的还是挑战的",
+        "第一次推荐白葱"
+      ],
+      "C. 外地人吃过": [
+        "离开云南一直念念不忘",
+        "火锅和爆炒差别有多大",
+        "干巴菌为什么是菌王"
       ]
     },
-    {
-      "title": "② 客户不回复",
-      "groups": [
-        {
-          "title": "话术（1）",
-          "lines": [
-            "亲爱的，我把小店的链接发给你，微信长按扫码就能进店选购啦。有空时也可以看下我朋友圈，新鲜菌子上来了我都会第一时间通知大家"
-          ]
-        }
-      ]
-    },
-    {
-      "title": "③ 客户回复后",
-      "groups": [
-        {
-          "title": "A. 云南人",
-          "lines": [
-            "那就不用我多介绍了哈哈！我们是楚雄的见手青，山里直接收的，有红葱和白葱，昆明曲靖的老表们喊红见手和白见手。黄牛肝和黑牛肝最近也都上了",
-            "好多云南朋友也找我买，怕买到假的 、买来不会做的，还有懒得自己整的，哈哈，都说我家炒的比馆子的还好吃",
-            "送人的话，白葱、黑牛肝、干巴菌这些要稳一点。安全、不会闹翻掉，而且买回去热一下就能吃，超级方便"
-          ]
-        },
-        {
-          "title": "B. 外地没吃过",
-          "lines": [
-            "见手青里最好吃的、最顶级的就两种：红葱和白葱\n1️⃣白见手青～我们云南叫白葱，炒熟了不会见小人人的安全版见手青\n2️⃣红见手青，也叫红葱，即使炒熟了没热透也会见小人人的见手青",
-            "您想试试挑战一点的还是安全的哈哈哈",
-            "我建议可以试试我家的白见手，能打开新世界的大门，觉得以前的菌子全部白吃了！！感觉十只鸡炖的汤都没有它鲜！吃起来奶香奶香的，口感脆嫩爽滑，是我们家的王牌飞行员！而且最重要的是还安全",
-            "牛肝菌吃起来都是脆嫩爽滑的，只是香味类型略有不同：有的人喜欢白葱，像个小姑娘奶香奶香的，有的人喜欢红葱，像个男子汉霸道浓郁，这两个都是见手青里的顶流；其他牛肝菌里，黄牛肝吃起来是最脆的，黑牛肝吃起来是最有肉感的，这就看个人口味了"
-          ]
-        },
-        {
-          "title": "C. 外地人吃过",
-          "lines": [
-            "好多外地朋友离开云南之后一直念念不忘！但是又怕吃不上正宗又安全的云南菌子，都来找我们买～吃一口立马回到云南！",
-            "亲爱的之前吃的是炒见手青吗？如果是觉得菌子火锅都好吃的话，那你吃爆炒见手青会好吃到疯掉！！在云南好吃的菌子必须拿来爆炒！一点水也不加！火锅的菌子一般都是杂菌，那个香味比不上爆炒见手青的100分之一",
-            "干巴菌，云南人心目中的菌王！！那个香气是咬下去一下子炸开的，很复合的香气，没有任何其他菌子可以相提并论，只有亲口吃了才知道"
-          ]
-        }
-      ]
-    },
-    {
-      "title": "④ 高频Q&A",
-      "groups": [
-        {
-          "title": "红葱 / 定制 / 鲜货",
-          "lines": [
-            "今年红葱不零售散卖，只5袋5袋的卖，因为红葱是有毒的，我是怕外地客户万一没热透、吃了闹翻掉就麻烦大了，所以基本上都是我家老顾客才会买来吃。红葱虽然是炒熟了的，但凉了以后毒性会恢复，如果没热透、吃了还是会中毒，老人小孩孕妇、体质弱的人都不建议吃",
-            "如果是不吃辣、不吃蒜、不吃猪油，或者有其他别的要求，今年可以做单独定制了，师傅单独开小灶炒一小锅。但是要10袋起，每袋300g",
-            "纯野生的菌子，只要没泡过药水的，挖出来当天就必须处理完，不然很快就长虫烂掉了，我做了7年野生菌了，一开始就是卖鲜货，因为物流坏损赔了很多钱，所以后面干脆做炒好的"
-          ]
-        },
-        {
-          "title": "规格",
-          "lines": [
-            "炒菌都是300g一袋，可以炒一大盘出来、够两三个人吃一顿了，这个是炒熟了以后的量。一公斤新鲜菌子，挑挑洗洗炒炒，也就只剩个四五两了",
-            "我们家的菌子是大厨炒熟了再发的，炒的时候放了一点点辣椒、大蒜还有盐巴，三岁小朋友都可以吃的那种。您收到后回锅炒一炒，爱吃辣的就放点蒜+小米辣，热透了就能吃啦，方便又美味",
-            "在云南一两百块一份的炒饭，我家的一份至少能炒三大碗出来！  我真的建议你试试，吃完你就知道这300g是有多扎实"
-          ]
-        },
-        {
-          "title": "价格",
-          "lines": [
-            "稍等，我把小店链接发给您，方便随时看品种和价格。长按二维码就能进店选购了，满减和满赠活动也都是设置好了的",
-            "今年菌子基本就这个价格了，现在是菌子最多最好的时候，到9月份开始落潮，好多老顾客都已经开始囤货了",
-            "卖真野生菌的，我家是性价比最高的，差不多是云南本地馆子5-7折的价格；卖假人工菌的，我家是真比不过价格哈哈。我们以前有顾客试过，去木水花买回来自己做，最后吃下来比从我们家买还贵一半，因为这些野生菌市场上面的零售价本身就比我们拿货价要贵很多，而且品质没有我们好、所以丢头更大"
-          ]
-        },
-        {
-          "title": "优惠",
-          "lines": [
-            "亲爱的，你先少买两份尝尝，别买太多，觉得好吃了再来，保证你吃完就想无限复购哈哈",
-            "现在优惠活动是任意2袋包邮（偏远地区需补运费差价），满500-40，满1000-100。私人订制是10袋送1袋，20袋送3袋，比较适合囤货",
-            "亲爱的，您体谅体谅我这就是个小本生意，卖一单就赚个10块8块的。要不这样，我再给您优惠20块，您看可以不？您之后帮我发发朋友圈宣传宣传、介绍些新朋友。一会儿您下单了先别急着支付，我去后台改价然后再喊你",
-            "亲爱的实在抱歉，您看这样好不好？下次您下单前记得喊我一声，我给您优惠20块，钱不多但也是我的一点小心意"
-          ]
-        },
-        {
-          "title": "品质",
-          "lines": [
-            "我们家炒菌子炒了七年了，做的都是老顾客回头的生意，靠的就是货真价实、薄利多销。菌子都是我哥蹲在楚雄一个山头一个山头去收回来的。不泡药水不掺假，只挑精品菌子拿来炒，您只要尝一次就知道了，嘴巴不会骗人的",
-            "野生菌本身损耗和丢头就大、炒了以后还会再缩水，而且最费工费时的是洗菌子处理菌子，一洗一个不吱声。",
-            "这两年经济环境不好，好些卖猪肉的卖皮鞋的也都跑了来卖菌子，本地的外省的、野生的人工的、不同品种的菌子都掺在一起卖，有些卖的价格比我们从山里收的成本还低，我是宁可关门不做生意也不会弄虚作假倒牌子"
-          ]
-        },
-        {
-          "title": "售后",
-          "lines": [
-            "后台看到您的订单啦，亲爱的稍等，我给你发食用指南和注意事项",
-            "等菌子到了一定要放进冰冻哈～不是放冷藏，冷冻保存可以放三个月左右。吃的时候用锅加热，不要用微波炉。如果实在担心，可以吃之前喝一点牛奶～",
-            "我给您安排刚收的品质最好的这一批，炒好后需要晾凉了、冻一晚上，明天就顺丰冷链给您发出去。一般是发货后1-2天到，偏远地区3天",
-            "您尝尝鲜，喜欢吃的话跟我说一声。欢迎推荐新朋友来加我微信买菌子，您推荐的新朋友首单可以减20，买完菌子后您下次回购我再给您减20"
-          ]
-        }
+    "qa": {
+      "红葱 / 定制 / 鲜货": [
+        "红葱为什么5袋起卖",
+        "私人定制10袋起",
+        "为什么不卖鲜货"
+      ],
+      "分量/口味": [
+        "四种牛肝菌口味区别",
+        "300克够几个人吃",
+        "收到后怎么回锅加热",
+        "一袋能炒多少碗饭"
+      ],
+      "价格": [
+        "发商城链接看价格",
+        "今年价格还会不会降",
+        "为什么我家不算便宜"
+      ],
+      "优惠": [
+        "建议先少买两袋尝鲜",
+        "现在的满减满赠活动",
+        "临门一脚再优惠20元",
+        "下次补偿20元"
+      ],
+      "品质": [
+        "七年老店和山里收货",
+        "野生菌损耗为什么大",
+        "为什么拒绝便宜假菌"
+      ],
+      "售后": [
+        "已经看到客户订单",
+        "冷冻保存和加热方法",
+        "发货时间和到货时效",
+        "老带新各减20元"
       ]
     }
-  ]
+  }
 };
-    const $=s=>document.querySelector(s);const $$=s=>Array.from(document.querySelectorAll(s));
-    async function copyText(text,btn,row){try{await navigator.clipboard.writeText(text);btn.textContent='已复制';row.classList.add('flash');setTimeout(()=>{btn.textContent='复制';row.classList.remove('flash')},1000)}catch(e){alert('请手动长按复制')}}
-    function makeLine(text){const row=document.createElement('div');row.className='line searchable';row.dataset.text=text.toLowerCase();const content=document.createElement('div');content.className='line-text';content.textContent=text;const btn=document.createElement('button');btn.type='button';btn.className='copy';btn.textContent='复制';btn.addEventListener('click',e=>{e.stopPropagation();copyText(text,btn,row)});row.append(content,btn);return row}
-    function bindToggle(head,container,bodyClass){const arrow=head.querySelector('.chev');const set=collapsed=>{container.classList.toggle('collapsed',collapsed);arrow.textContent=collapsed?'›':'⌄'};head.addEventListener('click',()=>set(!container.classList.contains('collapsed')));head.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();set(!container.classList.contains('collapsed'))}});container._collapse=()=>set(true);container._expand=()=>set(false)}
-    function makeGroup(group){const card=document.createElement('section');card.className='subcard group-card collapsed';card.dataset.text=[group.title,...group.lines].join(' ').toLowerCase();const head=document.createElement('div');head.className='subhead';head.setAttribute('role','button');head.tabIndex=0;const h=document.createElement('h3');h.textContent=group.title;const arrow=document.createElement('span');arrow.className='chev';arrow.textContent='›';head.append(h,arrow);const body=document.createElement('div');body.className='subbody';const lines=document.createElement('div');lines.className='lines';group.lines.forEach(line=>lines.append(makeLine(line)));body.append(lines);card.append(head,body);bindToggle(head,card,'subbody');return card}
-    function makeSection(section,index){const box=document.createElement('section');box.className='section';box.dataset.text=[section.title,...section.groups.flatMap(g=>[g.title,...g.lines])].join(' ').toLowerCase();const head=document.createElement('div');head.className='section-head';head.setAttribute('role','button');head.tabIndex=0;const h=document.createElement('h2');h.className='section-title';h.textContent=section.title;const arrow=document.createElement('span');arrow.className='chev';arrow.textContent='⌄';head.append(h,arrow);const body=document.createElement('div');body.className='section-body';if(index<2){box.classList.add('direct-section');const lines=document.createElement('div');lines.className='lines';section.groups.flatMap(group=>group.lines).forEach(line=>lines.append(makeLine(line)));body.append(lines)}else{const groups=document.createElement('div');groups.className='groups';section.groups.forEach(group=>groups.append(makeGroup(group)));body.append(groups)}box.append(head,body);bindToggle(head,box,'section-body');return box}
-    function defaultState(){$$('.section').forEach(x=>x._expand());$$('.group-card').forEach(x=>x._collapse());$$('.section,.group-card,.searchable').forEach(x=>x.classList.remove('hidden'));$('#empty').style.display='none'}
-    function search(query){const q=query.trim().toLowerCase();if(!q){defaultState();return}let found=0;$$('.section').forEach(section=>{let sectionHit=false;if(section.classList.contains('direct-section')){section.querySelectorAll('.searchable').forEach(line=>{const hit=line.dataset.text.includes(q);line.classList.toggle('hidden',!hit);if(hit){sectionHit=true;found++}})}else{section.querySelectorAll('.group-card').forEach(group=>{const hit=group.dataset.text.includes(q);group.classList.toggle('hidden',!hit);if(hit){group._expand();sectionHit=true;found++}})}section.classList.toggle('hidden',!sectionHit);if(sectionHit)section._expand()});$('#empty').style.display=found?'none':'block'}
-    data.sections.forEach((section,index)=>$('#sections').append(makeSection(section,index)));
-    defaultState();$('#search').addEventListener('input',e=>search(e.target.value));
+    const byId=id=>document.getElementById(id);
+    let currentText='';
+    async function copyText(text,button,row){
+      try{
+        await navigator.clipboard.writeText(text);
+        const original=button.textContent;button.textContent='已复制 ✓';if(row)row.classList.add('flash');
+        setTimeout(()=>{button.textContent=original;if(row)row.classList.remove('flash')},1000);
+      }catch(error){window.prompt('请手动复制',text)}
+    }
+    function openDrawer(name,text){currentText=text;byId('drawer-title').textContent=name;byId('drawer-text').textContent=text;byId('drawer-layer').classList.add('open');byId('drawer-layer').setAttribute('aria-hidden','false')}
+    function closeDrawer(){byId('drawer-layer').classList.remove('open');byId('drawer-layer').setAttribute('aria-hidden','true')}
+    function indexItem(name,text){
+      const row=document.createElement('div');row.className='index-item';
+      const title=document.createElement('button');title.type='button';title.className='index-name';title.textContent=name;title.addEventListener('click',()=>openDrawer(name,text));
+      const copy=document.createElement('button');copy.type='button';copy.className='copy';copy.textContent='复制';copy.addEventListener('click',()=>copyText(text,copy,row));
+      row.append(title,copy);return row;
+    }
+    function renderList(target,names,lines){target.replaceChildren(...lines.map((line,index)=>indexItem(names[index],line)))}
+    function buildTabs(target,groups,onSelect){
+      groups.forEach((group,index)=>{const button=document.createElement('button');button.type='button';button.className='tab'+(index===0?' active':'');button.textContent=group.title.replace(/^[ABC]\.\s*/, '');button.addEventListener('click',()=>{target.querySelectorAll('.tab').forEach(tab=>tab.classList.remove('active'));button.classList.add('active');onSelect(group,index)});target.append(button)});
+    }
+    data.content.opening.forEach((line,index)=>byId('opening').append(indexItem(data.labels.opening[index],line)));
+    buildTabs(byId('customer-tabs'),data.content.customers,group=>renderList(byId('customer-list'),data.labels.customers[group.title],group.lines));
+    renderList(byId('customer-list'),data.labels.customers[data.content.customers[0].title],data.content.customers[0].lines);
+    buildTabs(byId('qa-tabs'),data.content.qa,group=>renderList(byId('qa-list'),data.labels.qa[group.title],group.lines));
+    renderList(byId('qa-list'),data.labels.qa[data.content.qa[0].title],data.content.qa[0].lines);
+    document.querySelectorAll('.mobile-main-tabs .tab').forEach(button=>button.addEventListener('click',()=>{
+      document.querySelectorAll('.mobile-main-tabs .tab').forEach(tab=>tab.classList.remove('active'));button.classList.add('active');
+      byId('customers-panel').classList.toggle('mobile-active',button.dataset.pane==='customers');
+      byId('qa-panel').classList.toggle('mobile-active',button.dataset.pane==='qa');
+    }));
+    byId('drawer-close').addEventListener('click',closeDrawer);
+    byId('drawer-layer').addEventListener('click',event=>{if(event.target===byId('drawer-layer'))closeDrawer()});
+    byId('drawer-copy').addEventListener('click',()=>copyText(currentText,byId('drawer-copy')));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeDrawer()});
   </script>
 </body>
 </html>
