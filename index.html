@@ -4,47 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17684f">
-  <title>销售话术卡 V5.6</title>
+  <title>销售话术卡 V6.0 设计稿</title>
   <style>
-    :root{--bg:#eef3f0;--surface:#fff;--surface-2:#f7faf8;--ink:#17231e;--muted:#69756f;--line:#d5dfda;--main:#17684f;--main-soft:#e4f0e9;--active:#d5e9de;--flash:#fff3b5}
+    :root{--bg:#edf3ef;--surface:#fff;--surface-2:#f6faf7;--ink:#18241f;--muted:#66736d;--line:#d3ded8;--main:#17684f;--main-soft:#e4f0e9;--active:#d4e9dd;--flash:#fff3b5}
     *{box-sizing:border-box}html,body{margin:0;min-height:100%;overflow-x:hidden}body{background:var(--bg);color:var(--ink);font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button{font:inherit;touch-action:manipulation}
-    .app{height:100dvh;max-width:1440px;margin:auto;padding:7px;display:grid;grid-template-rows:auto auto auto minmax(0,1fr);gap:6px}.brand{margin:0;font-size:15px;line-height:1.1;font-weight:850}
-    .opening,.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;min-width:0}.opening{padding:5px}.section-label,.panel-title{margin:0 0 4px;font-size:14px;line-height:1.15;font-weight:850;color:var(--main)}.panel-title{padding:7px 7px 2px}
-    .opening-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.index-list{display:grid;gap:4px}.index-item{display:flex;align-items:center;gap:5px;min-width:0;background:var(--surface-2);border-radius:6px;padding:4px}.index-name{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);padding:4px 5px;text-align:left;font-weight:700;cursor:pointer;overflow-wrap:anywhere}.index-name:hover{color:var(--main)}.copy{flex:0 0 auto;border:0;border-radius:6px;background:var(--main);color:#fff;min-width:43px;min-height:27px;padding:3px 7px;font-size:12px;font-weight:800;cursor:pointer}.index-item.flash{background:var(--flash)}
-    .main-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.main-tab{border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);min-height:36px;padding:5px 8px;font-weight:800;cursor:pointer}.main-tab.active{border-color:#8db09f;background:var(--active);color:var(--main)}.workspace{min-height:0}.panel{display:none;height:100%;grid-template-rows:auto minmax(0,1fr);overflow:hidden}.panel.active{display:grid}.panel-body{min-height:0;overflow:auto;padding:0 6px 6px;scrollbar-gutter:stable}.customer-groups{display:grid;gap:7px}.customer-group,.qa-group{min-width:0;max-width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:7px;padding:6px}.customer-group-title,.qa-group-title{margin:0 0 4px;padding:0 2px;color:var(--main);font-size:13px;line-height:1.15;font-weight:850}.customer-group .index-list,.qa-group .index-list{gap:3px}.customer-group .index-item,.qa-group .index-item{display:grid;grid-template-columns:minmax(0,1fr) 64px;align-items:center;column-gap:7px;min-height:36px;background:#fff;padding:3px 4px}.customer-group .index-name,.qa-group .index-name{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;padding:2px 3px;font-size:12.5px;line-height:1.25}.customer-group .copy,.qa-group .copy{width:64px;min-width:64px;min-height:30px;padding:3px 5px;font-size:11.5px;justify-self:end}.qa-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}
-    .drawer-layer{position:fixed;inset:0;z-index:50;display:none;background:rgba(11,28,21,.32)}.drawer-layer.open{display:block}.drawer{position:absolute;top:0;right:0;width:min(430px,92vw);height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:#fff;box-shadow:-8px 0 28px rgba(12,35,27,.18);padding:14px}.drawer-head{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:9px}.drawer-title{flex:1;margin:0;font-size:16px}.close{border:0;background:var(--main-soft);color:var(--main);border-radius:6px;min-width:34px;min-height:30px;font-size:18px;cursor:pointer}.drawer-text{overflow:auto;white-space:pre-line;overflow-wrap:anywhere;font-size:15px;line-height:1.65;padding:13px 1px}.drawer-copy{border:0;border-radius:7px;background:var(--main);color:#fff;min-height:40px;font-weight:850;cursor:pointer}
-    @media(max-width:760px){body{font-size:13.5px}.app{height:auto;min-height:100dvh;padding:6px;display:block}.brand{margin-bottom:5px}.opening{margin-bottom:6px}.opening-grid{grid-template-columns:1fr;gap:3px}.main-tabs{margin-bottom:6px}.workspace{display:block}.panel{display:none;height:auto;grid-template-rows:auto auto;overflow:visible;margin-bottom:6px}.panel.active{display:grid}.panel-body{overflow:visible;padding:0 4px 5px}.qa-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.qa-group{min-width:0;max-width:100%;padding:5px}.qa-group-title{font-size:13px;margin-bottom:3px;overflow-wrap:anywhere}.qa-group .index-list{gap:3px}.qa-group .index-item{grid-template-columns:minmax(0,1fr) 52px;column-gap:4px;min-width:0;min-height:34px;padding:2px}.qa-group .index-name{min-width:0;padding:2px;font-size:12px;line-height:1.2;overflow-wrap:anywhere}.qa-group .copy{width:52px;min-width:52px;min-height:34px;padding:2px 4px;font-size:13px;white-space:nowrap}.drawer{top:auto;bottom:0;width:100%;height:min(72dvh,620px);border-radius:14px 14px 0 0;padding:12px}.drawer-title{font-size:15px}.drawer-text{font-size:14.5px}}
+    .app{width:min(100%,1500px);min-height:100dvh;margin:auto;padding:8px;display:grid;grid-template-rows:auto auto auto 1fr;gap:7px}.brand{margin:0;font-size:16px;line-height:1.15;font-weight:850}
+    .opening,.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;min-width:0}.opening{padding:6px}.section-label,.panel-title{margin:0 0 5px;color:var(--main);font-size:14px;line-height:1.2;font-weight:850}.panel-title{padding:7px 8px 2px}
+    .opening-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.main-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.main-tab{min-height:38px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);padding:5px 8px;font-weight:850;cursor:pointer}.main-tab.active{border-color:#88ad9b;background:var(--active);color:var(--main)}
+    .workspace{min-width:0}.panel{display:none}.panel.active{display:block}.panel-body{padding:0 7px 7px}.section-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;align-items:start}.group-card{min-width:0;background:var(--surface-2);border:1px solid var(--line);border-radius:7px;padding:7px}.group-title{margin:0 0 5px;padding:0 2px;color:var(--main);font-size:14px;line-height:1.2;font-weight:850}
+    .index-list{display:grid;gap:4px}.script-row{display:grid;grid-template-columns:minmax(0,1fr) 62px;align-items:center;gap:7px;min-width:0;min-height:38px;padding:3px 4px;background:#fff;border-radius:6px}.script-name{min-width:0;border:0;background:transparent;color:var(--ink);padding:4px;text-align:left;font-weight:700;line-height:1.25;cursor:pointer;overflow-wrap:anywhere}.script-name:hover{color:var(--main)}.copy{width:62px;min-width:62px;min-height:31px;border:0;border-radius:6px;background:var(--main);color:#fff;padding:3px 4px;font-size:12px;font-weight:800;white-space:nowrap;cursor:pointer}.script-row.flash{background:var(--flash)}
+    .drawer-layer{position:fixed;inset:0;z-index:50;display:none;background:rgba(11,28,21,.32)}.drawer-layer.open{display:block}.drawer{position:absolute;top:0;right:0;width:min(440px,92vw);height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:#fff;box-shadow:-8px 0 28px rgba(12,35,27,.18);padding:14px}.drawer-head{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:9px}.drawer-title{flex:1;margin:0;font-size:16px}.close{min-width:34px;min-height:30px;border:0;border-radius:6px;background:var(--main-soft);color:var(--main);font-size:18px;cursor:pointer}.drawer-text{overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;padding:13px 1px;font-size:15px;line-height:1.65}.drawer-copy{min-height:40px;border:0;border-radius:7px;background:var(--main);color:#fff;font-weight:850;cursor:pointer}
+    @media(max-width:760px){body{font-size:13px}.app{padding:5px;gap:5px}.brand{font-size:15px}.opening{padding:5px}.opening-grid{grid-template-columns:1fr;gap:3px}.main-tabs{gap:5px}.main-tab{min-height:36px}.panel-title{padding:6px 5px 2px}.panel-body{padding:0 4px 5px}.section-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.group-card{padding:5px}.group-title{margin-bottom:3px;font-size:13px;overflow-wrap:anywhere}.index-list{gap:3px}.script-row{grid-template-columns:minmax(0,1fr) 50px;gap:4px;min-height:35px;padding:2px}.script-name{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;padding:2px;font-size:12px;line-height:1.2}.copy{width:50px;min-width:50px;min-height:34px;padding:2px;font-size:12px}.drawer{top:auto;bottom:0;width:100%;height:min(72dvh,620px);border-radius:14px 14px 0 0;padding:12px}.drawer-title{font-size:15px}.drawer-text{font-size:14.5px}}
   </style>
 </head>
 <body>
   <main class="app">
     <h1 class="brand">销售话术卡</h1>
-    <section class="opening">
-      <h2 class="section-label">① 新客进线</h2>
-      <div class="opening-grid" id="opening"></div>
-    </section>
-    <nav class="main-tabs" aria-label="话术区域切换">
-      <button class="main-tab active" data-pane="customers" type="button" aria-selected="true">客户分类</button>
-      <button class="main-tab" data-pane="qa" type="button" aria-selected="false">高频Q&A</button>
-    </nav>
+    <section class="opening"><h2 class="section-label">① 新客进线</h2><div class="opening-grid" id="opening"></div></section>
+    <nav class="main-tabs" aria-label="话术区域切换"><button class="main-tab active" data-pane="customers" type="button" aria-selected="true">客户分类</button><button class="main-tab" data-pane="qa" type="button" aria-selected="false">高频Q&amp;A</button></nav>
     <div class="workspace">
-      <section class="panel customer-panel active" id="customers-panel">
-        <h2 class="panel-title">② 客户分类</h2>
-        <div class="panel-body"><div class="customer-groups" id="customer-groups"></div></div>
-      </section>
-      <section class="panel qa-panel" id="qa-panel">
-        <h2 class="panel-title">③ 高频Q&A</h2>
-        <div class="panel-body"><div class="qa-grid" id="qa-grid"></div></div>
-      </section>
+      <section class="panel active" id="customers-panel"><h2 class="panel-title">② 客户分类</h2><div class="panel-body"><div class="section-grid" id="customer-grid"></div></div></section>
+      <section class="panel" id="qa-panel"><h2 class="panel-title">③ 高频Q&amp;A</h2><div class="panel-body"><div class="section-grid" id="qa-grid"></div></div></section>
     </div>
   </main>
-  <div class="drawer-layer" id="drawer-layer" aria-hidden="true">
-    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
-      <header class="drawer-head"><h2 class="drawer-title" id="drawer-title"></h2><button class="close" id="drawer-close" type="button" aria-label="关闭">×</button></header>
-      <div class="drawer-text" id="drawer-text"></div>
-      <button class="drawer-copy" id="drawer-copy" type="button">复制完整话术</button>
-    </aside>
-  </div>
+  <div class="drawer-layer" id="drawer-layer" aria-hidden="true"><aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title"><header class="drawer-head"><h2 class="drawer-title" id="drawer-title"></h2><button class="close" id="drawer-close" type="button" aria-label="关闭">×</button></header><div class="drawer-text" id="drawer-text"></div><button class="drawer-copy" id="drawer-copy" type="button">复制完整话术</button></aside></div>
   <script>
     const data={
   "content": {
@@ -57,7 +40,7 @@
       {
         "title": "A. 云南人",
         "lines": [
-          "那就不用我多介绍了哈哈！我们是楚雄的见手青，山里直接收的，有红葱和白葱，昆明曲靖的老表们喊红见手和白见手。黄牛肝和黑牛肝最近也都上了，鸡纵菌和干巴菌的量还在少、价格也还在高，还要再等等",
+          "那就不用我多介绍了哈哈！现在主要是有楚雄的见手青，山里直接收的，有红葱和白葱，昆明曲靖的老表们喊红见手和白见手。黄牛肝和黑牛肝最近也都上了，鸡纵菌和干巴菌的量还在少、价格也还在高，还要再等等",
           "好多云南朋友也找我买，怕买到假的 、买来不会做的，还有懒得自己整的，哈哈，都说我家炒的比馆子的还好吃",
           "送人的话，白葱、黑牛肝、干巴菌这些要稳一点。安全、不会闹翻掉，而且买回去热一下就能吃，超级方便"
         ]
@@ -65,9 +48,9 @@
       {
         "title": "B. 外地没吃过",
         "lines": [
-          "见手青里最好吃的、最顶级的就两种：红葱和白葱\n1️⃣白见手青～我们云南叫白葱，炒熟了不会见小人人的安全版见手青\n2️⃣红见手青，也叫红葱，即使炒熟了没热透也会见小人人的见手青",
+          "见手青里最好吃的、最顶级的就两种：红葱和白葱\n白见手青～我们楚雄叫白葱，炒熟了不会见小人人的安全版见手青\n红见手青～我们楚雄叫红葱，即使炒熟了没热透也会见小人人的见手青",
           "您想试试挑战一点的还是安全的哈哈哈",
-          "我建议可以试试我家的白见手，能打开新世界的大门，觉得以前的菌子全部白吃了！感觉十只鸡炖的汤都没有它鲜！吃起来奶香奶香的，口感脆嫩爽滑，是我们家的王牌飞行员！而且最重要的是还安全！"
+          "我建议可以试试我家的白见手，能打开新世界的大门，觉得以前的菌子全部白吃了！感觉十只鸡炖的汤都没有它鲜！吃起来奶香奶香的，口感脆嫩爽滑，是我们家的王牌飞行员～而且最重要的是还安全！"
         ]
       },
       {
@@ -77,18 +60,18 @@
           "亲爱的之前吃的是炒见手青吗？如果是觉得菌子火锅都好吃的话，那你吃爆炒见手青会好吃到疯掉！！在云南好吃的菌子必须拿来爆炒！一点水也不加！火锅的菌子一般都是杂菌，那个香味比不上爆炒见手青的100分之一",
           "干巴菌，云南人心目中的菌王！！那个香气是咬下去一下子炸开的，很复合的香气，没有任何其他菌子可以相提并论，只有亲口吃了才知道"
         ]
-      }
-    ],
-    "qa": [
+      },
       {
-        "title": "红葱 / 定制 / 鲜货",
+        "title": "D. 红葱 / 定制 / 鲜货",
         "lines": [
           "今年红葱不零售散卖，只5袋5袋的卖，因为红葱是有毒的，外地新客户万一没热透、吃了闹翻掉就麻烦大了，所以基本上都是我家老顾客才会买来吃。红葱虽然是炒熟了的，但凉了以后毒性会恢复，如果没热透、吃了还是会中毒，老人小孩孕妇、体质弱的人都不建议吃",
           "加热红葱注意事项，必看❗️❗️❗️\n1、红葱不能用微波炉加热！\n2、第一顿吃不完的红葱，放冰箱后毒性恢复，第二顿吃依然要热透；最好一顿吃完！\n3、老人孕妇孩子体质虚弱者不要吃！\n4、红葱需要谨慎不是紧张，热透就是山珍美味，购买野生菌中毒是不负责的！",
           "如果是不吃辣、不吃蒜、不吃猪油，或者有其他别的要求，今年可以做单独定制了，师傅单独开小灶炒一小锅。但是要10袋起，每袋300g",
           "纯野生的菌子，只要没泡过药水的，挖出来当天就必须处理完，不然很快就长虫烂掉了，我做了7年野生菌了，一开始就是卖鲜货，因为物流坏损赔了很多钱，所以后面干脆做炒好的"
         ]
-      },
+      }
+    ],
+    "qa": [
       {
         "title": "分量/口味",
         "lines": [
@@ -99,18 +82,10 @@
         ]
       },
       {
-        "title": "价格",
+        "title": "价格/优惠",
         "lines": [
-          "稍等，我把小店链接发给您，方便随时看品种和价格。长按二维码就能进店选购了，满减和满赠活动也都是设置好了的，2袋包邮比较划算（偏远地区需补运费差价）",
-          "今年菌子基本就这个价格了，现在是菌子最多最好的时候，到9月份开始落潮，好多老顾客都已经开始囤货了",
-          "卖真野生菌的，我家是性价比最高的，差不多是云南本地馆子5-7折的价格；卖假人工菌的，我家是真比不过价格哈哈。我们以前有顾客试过，去木水花买回来自己做，最后吃下来比从我们家买还贵一半，因为这些野生菌市场上面的零售价本身就比我们拿货价要贵很多，而且品质没有我们好、所以丢头更大"
-        ]
-      },
-      {
-        "title": "优惠",
-        "lines": [
+          "稍等，我把小店链接发给您，方便随时看品种和价格，长按二维码就能进店选购了。现在的优惠活动是：2袋包邮（偏远地区需补运费差价），满500-40，满1000-100。私人订制是10袋送1袋，20袋送3袋，比较适合囤货",
           "亲爱的，你先少买两份尝尝，别买太多，觉得好吃了再来，保证你吃完就想无限复购哈哈。下单后您喊我一声，我给您发保存和食用指南",
-          "现在优惠活动是2袋包邮（偏远地区需补运费差价），满500-40，满1000-100。私人订制是10袋送1袋，20袋送3袋，比较适合囤货",
           "亲爱的，您体谅体谅我这就是个小本生意，卖一单就赚个10块8块的。要不这样，我再给您优惠20块，您看可以不？您之后帮我发发朋友圈宣传宣传、介绍些新朋友。一会儿您下单后别急着支付，我去后台改价然后再喊你",
           "亲爱的实在抱歉，您看这样好不好？下次您下单前记得喊我一声，我给您优惠20块，钱不多但也是我的一点小心意"
         ]
@@ -119,8 +94,8 @@
         "title": "品质",
         "lines": [
           "我们家炒菌子炒了七年了，做的都是老顾客回头的生意，货真价实、薄利多销。菌子都是我哥蹲在楚雄一个山头一个山头去收的，山里出什么、我们就卖什么，品质不好、不应季的菌子我们都不收，不泡药水不掺假，您只要尝一次就知道了，嘴巴不会骗人的",
-          "野生菌本身损耗和丢头就大、炒了以后还会再缩水，而且最费工费时的是洗菌子处理菌子，一洗一个不吱声",
-          "这两年经济环境不好，好些卖猪肉的卖皮鞋的也都跑了来卖菌子，本地的外省的、野生的人工的、不同品种的菌子都掺在一起卖，有些卖的价格比我们从山里收的成本还低，我是宁可关门不做生意也不会弄虚作假倒牌子"
+          "卖真野生菌的，我家是性价比最高的，差不多是云南本地馆子5-7折的价格，您把大众点评定位昆明，随便找几个馆子看一下价格就知道啦，一盘见手青炒出来要两三百，分量还没我家的一袋多；卖假人工菌的，我家是真比不过价格哈哈。这两年经济环境不好，好些卖猪肉的卖皮鞋的也都跑了来卖菌子，本地的外省的、野生的人工的、不同品种的菌子都掺在一起卖，有些卖的价格比我们从山里收的成本还低，我是宁可关门不做生意也不会弄虚作假倒牌子",
+          "我们以前有顾客试过，去木水花买回来自己做，最后吃下来比从我们家买还贵一半，因为这些野生菌市场上面的零售价本身就比我们拿货价要贵很多，而且品质没有我们好、所以丢头更大。野生菌本身损耗和丢头就大、炒了以后还会再缩水，而且最费工费时的是洗菌子处理菌子，一洗一个不吱声"
         ]
       },
       {
@@ -142,105 +117,65 @@
     ],
     "customers": {
       "A. 云南人": [
-        "楚雄见手青和品种介绍",
-        "为什么云南人也来找我买",
+        "现在都有哪些菌子",
+        "云南人也都找我买",
         "送人推荐哪些菌子"
       ],
       "B. 外地没吃过": [
-        "红葱和白葱有什么区别",
-        "想吃安全的还是挑战的",
-        "第一次推荐白葱"
+        "白葱和红葱最好吃",
+        "想吃安全还是挑战",
+        "推荐吃我家白葱"
       ],
       "C. 外地人吃过": [
-        "离开云南一直念念不忘",
-        "火锅和爆炒差别有多大",
+        "吃一口就回云南",
+        "火锅和爆炒差别多大",
         "干巴菌为什么是菌王"
+      ],
+      "D. 红葱 / 定制 / 鲜货": [
+        "红葱有毒5袋卖",
+        "红葱食用指南",
+        "私人定制10袋卖",
+        "为什么不卖鲜货"
       ]
     },
     "qa": {
-      "红葱 / 定制 / 鲜货": [
-        "红葱5袋起卖",
-        "红葱加热注意事项",
-        "私人定制10袋起卖",
-        "为什么不卖鲜货"
-      ],
       "分量/口味": [
         "四种牛肝菌口味区别",
-        "炒菌300克，够几个人吃",
-        "菌子炒熟的，热透就能吃",
-        "我家炒饭能顶馆子三盘"
+        "炒菌都是300克",
+        "菌子都是炒熟的",
+        "一袋能炒三碗饭"
       ],
-      "价格": [
-        "发商城链接看价格",
-        "今年价格不会再降",
-        "我家比馆子和自己做还便宜"
-      ],
-      "优惠": [
-        "先少买两袋尝尝鲜",
-        "优惠活动和包邮政策",
-        "讲价的酌情优惠20块",
-        "我方过错就补偿20块"
+      "价格/优惠": [
+        "发链接给价格",
+        "第一次少买两袋",
+        "大单讲价客户",
+        "道歉补偿客户"
       ],
       "品质": [
-        "七年老店，做回头客生意",
-        "野生菌损耗大，难清洗",
-        "经济不好，卖假货的很多"
+        "七年老店做口碑",
+        "为啥我家贵",
+        "自己做更贵"
       ],
       "售后": [
-        "下单后发食用指南",
-        "菌子保存方式",
-        "发货时间和到货时效",
-        "老带新各减20"
+        "确认订单发指南",
+        "冷冻和加热方法",
+        "发货流程和时间",
+        "老介新各减20"
       ]
     }
   }
 };
-    const byId=id=>document.getElementById(id);
-    let currentText='';
-    async function copyText(text,button,row){
-      try{
-        await navigator.clipboard.writeText(text);
-        const original=button.textContent;button.textContent='已复制 ✓';if(row)row.classList.add('flash');
-        setTimeout(()=>{button.textContent=original;if(row)row.classList.remove('flash')},1000);
-      }catch(error){window.prompt('请手动复制',text)}
-    }
+    const byId=id=>document.getElementById(id);let currentText='';
+    async function copyText(text,button,row){let copied=false;try{await navigator.clipboard.writeText(text);copied=true}catch(error){const area=document.createElement('textarea');area.value=text;area.setAttribute('readonly','');area.style.position='fixed';area.style.opacity='0';document.body.append(area);area.select();copied=document.execCommand('copy');area.remove()}if(copied){const original=button.textContent;button.textContent='已复制✓';if(row)row.classList.add('flash');setTimeout(()=>{button.textContent=original;if(row)row.classList.remove('flash')},1000)}}
     function openDrawer(name,text){currentText=text;byId('drawer-title').textContent=name;byId('drawer-text').textContent=text;byId('drawer-layer').classList.add('open');byId('drawer-layer').setAttribute('aria-hidden','false')}
     function closeDrawer(){byId('drawer-layer').classList.remove('open');byId('drawer-layer').setAttribute('aria-hidden','true')}
-    function indexItem(name,text){
-      const row=document.createElement('div');row.className='index-item';
-      const title=document.createElement('button');title.type='button';title.className='index-name';title.textContent=name;title.addEventListener('click',()=>openDrawer(name,text));
-      const copy=document.createElement('button');copy.type='button';copy.className='copy';copy.textContent='复制';copy.addEventListener('click',()=>copyText(text,copy,row));
-      row.append(title,copy);return row;
-    }
-    function renderList(target,names,lines){target.replaceChildren(...lines.map((line,index)=>indexItem(names[index],line)))}
-    function renderCustomerGroups(){
-      byId('customer-groups').replaceChildren(...data.content.customers.map(group=>{
-        const section=document.createElement('section');section.className='customer-group';
-        const title=document.createElement('h3');title.className='customer-group-title';title.textContent=group.title.replace(/^[ABC]\.\s*/, '');
-        const list=document.createElement('div');list.className='index-list';
-        renderList(list,data.labels.customers[group.title],group.lines);section.append(title,list);return section;
-      }));
-    }
-    function renderQaGroups(){
-      byId('qa-grid').replaceChildren(...data.content.qa.map(group=>{
-        const section=document.createElement('section');section.className='qa-group';
-        const title=document.createElement('h3');title.className='qa-group-title';title.textContent=group.title;
-        const list=document.createElement('div');list.className='index-list';
-        renderList(list,data.labels.qa[group.title],group.lines);section.append(title,list);return section;
-      }));
-    }
-    data.content.opening.forEach((line,index)=>byId('opening').append(indexItem(data.labels.opening[index],line)));
-    renderCustomerGroups();
-    renderQaGroups();
-    document.querySelectorAll('.main-tab').forEach(button=>button.addEventListener('click',()=>{
-      document.querySelectorAll('.main-tab').forEach(tab=>{const selected=tab===button;tab.classList.toggle('active',selected);tab.setAttribute('aria-selected',String(selected))});
-      byId('customers-panel').classList.toggle('active',button.dataset.pane==='customers');
-      byId('qa-panel').classList.toggle('active',button.dataset.pane==='qa');
-    }));
-    byId('drawer-close').addEventListener('click',closeDrawer);
-    byId('drawer-layer').addEventListener('click',event=>{if(event.target===byId('drawer-layer'))closeDrawer()});
-    byId('drawer-copy').addEventListener('click',()=>copyText(currentText,byId('drawer-copy')));
-    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeDrawer()});
+    function scriptRow(name,text){const row=document.createElement('div');row.className='script-row';const title=document.createElement('button');title.type='button';title.className='script-name';title.textContent=name;title.addEventListener('click',()=>openDrawer(name,text));const copy=document.createElement('button');copy.type='button';copy.className='copy';copy.textContent='复制';copy.addEventListener('click',()=>copyText(text,copy,row));row.append(title,copy);return row}
+    function renderList(target,names,lines){target.replaceChildren(...lines.map((line,index)=>scriptRow(names[index],line)))}
+    function renderGroups(target,groups,labelMap){target.replaceChildren(...groups.map(group=>{const section=document.createElement('section');section.className='group-card';const title=document.createElement('h3');title.className='group-title';title.textContent=group.title.replace(/^[A-D]\.\s*/, '');const list=document.createElement('div');list.className='index-list';renderList(list,labelMap[group.title],group.lines);section.append(title,list);return section}))}
+    data.content.opening.forEach((line,index)=>byId('opening').append(scriptRow(data.labels.opening[index],line)));
+    renderGroups(byId('customer-grid'),data.content.customers,data.labels.customers);renderGroups(byId('qa-grid'),data.content.qa,data.labels.qa);
+    document.querySelectorAll('.main-tab').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.main-tab').forEach(tab=>{const selected=tab===button;tab.classList.toggle('active',selected);tab.setAttribute('aria-selected',String(selected))});byId('customers-panel').classList.toggle('active',button.dataset.pane==='customers');byId('qa-panel').classList.toggle('active',button.dataset.pane==='qa')}));
+    byId('drawer-close').addEventListener('click',closeDrawer);byId('drawer-layer').addEventListener('click',event=>{if(event.target===byId('drawer-layer'))closeDrawer()});byId('drawer-copy').addEventListener('click',()=>copyText(currentText,byId('drawer-copy')));document.addEventListener('keydown',event=>{if(event.key==='Escape')closeDrawer()});
   </script>
 </body>
 </html>
