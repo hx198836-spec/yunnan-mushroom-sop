@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17684f">
-  <title>销售话术卡 V5</title>
+  <title>销售话术卡 V5.6</title>
   <style>
     :root{--bg:#eef3f0;--surface:#fff;--surface-2:#f7faf8;--ink:#17231e;--muted:#69756f;--line:#d5dfda;--main:#17684f;--main-soft:#e4f0e9;--active:#d5e9de;--flash:#fff3b5}
     *{box-sizing:border-box}html,body{margin:0;min-height:100%;overflow-x:hidden}body{background:var(--bg);color:var(--ink);font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button{font:inherit;touch-action:manipulation}
-    .app{height:100dvh;max-width:1440px;margin:auto;padding:7px;display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:6px}.brand{margin:0;font-size:15px;line-height:1.1;font-weight:850}
+    .app{height:100dvh;max-width:1440px;margin:auto;padding:7px;display:grid;grid-template-rows:auto auto auto minmax(0,1fr);gap:6px}.brand{margin:0;font-size:15px;line-height:1.1;font-weight:850}
     .opening,.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;min-width:0}.opening{padding:5px}.section-label,.panel-title{margin:0 0 4px;font-size:14px;line-height:1.15;font-weight:850;color:var(--main)}.panel-title{padding:7px 7px 2px}
     .opening-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.index-list{display:grid;gap:4px}.index-item{display:flex;align-items:center;gap:5px;min-width:0;background:var(--surface-2);border-radius:6px;padding:4px}.index-name{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);padding:4px 5px;text-align:left;font-weight:700;cursor:pointer;overflow-wrap:anywhere}.index-name:hover{color:var(--main)}.copy{flex:0 0 auto;border:0;border-radius:6px;background:var(--main);color:#fff;min-width:43px;min-height:27px;padding:3px 7px;font-size:12px;font-weight:800;cursor:pointer}.index-item.flash{background:var(--flash)}
-    .mobile-main-tabs{display:none}.workspace{min-height:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,13fr);gap:6px}.panel{display:grid;grid-template-rows:auto auto minmax(0,1fr);overflow:hidden}.tabs{display:flex;gap:4px;padding:0 6px 6px;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{flex:1;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);padding:5px 6px;font-size:12px;font-weight:750;white-space:nowrap;cursor:pointer}.tab.active{border-color:#8db09f;background:var(--active);color:#0f513d}.panel-body{min-height:0;overflow:auto;padding:0 6px 6px;scrollbar-gutter:stable}.qa-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 6px 7px}.qa-tabs .tab{width:100%;min-width:0;min-height:35px;display:flex;align-items:center;justify-content:center;white-space:normal;line-height:1.15;text-align:center} 
+    .main-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.main-tab{border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);min-height:36px;padding:5px 8px;font-weight:800;cursor:pointer}.main-tab.active{border-color:#8db09f;background:var(--active);color:var(--main)}.workspace{min-height:0}.panel{display:none;height:100%;grid-template-rows:auto minmax(0,1fr);overflow:hidden}.panel.active{display:grid}.panel-body{min-height:0;overflow:auto;padding:0 6px 6px;scrollbar-gutter:stable}.customer-groups{display:grid;gap:7px}.customer-group,.qa-group{min-width:0;max-width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:7px;padding:6px}.customer-group-title,.qa-group-title{margin:0 0 4px;padding:0 2px;color:var(--main);font-size:13px;line-height:1.15;font-weight:850}.customer-group .index-list,.qa-group .index-list{gap:3px}.customer-group .index-item,.qa-group .index-item{display:grid;grid-template-columns:minmax(0,1fr) 64px;align-items:center;column-gap:7px;min-height:36px;background:#fff;padding:3px 4px}.customer-group .index-name,.qa-group .index-name{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;padding:2px 3px;font-size:12.5px;line-height:1.25}.customer-group .copy,.qa-group .copy{width:64px;min-width:64px;min-height:30px;padding:3px 5px;font-size:11.5px;justify-self:end}.qa-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}
     .drawer-layer{position:fixed;inset:0;z-index:50;display:none;background:rgba(11,28,21,.32)}.drawer-layer.open{display:block}.drawer{position:absolute;top:0;right:0;width:min(430px,92vw);height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:#fff;box-shadow:-8px 0 28px rgba(12,35,27,.18);padding:14px}.drawer-head{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:9px}.drawer-title{flex:1;margin:0;font-size:16px}.close{border:0;background:var(--main-soft);color:var(--main);border-radius:6px;min-width:34px;min-height:30px;font-size:18px;cursor:pointer}.drawer-text{overflow:auto;white-space:pre-line;overflow-wrap:anywhere;font-size:15px;line-height:1.65;padding:13px 1px}.drawer-copy{border:0;border-radius:7px;background:var(--main);color:#fff;min-height:40px;font-weight:850;cursor:pointer}
-    @media(max-width:760px){body{font-size:13.5px}.app{height:auto;min-height:100dvh;padding:6px;display:block}.brand{margin-bottom:5px}.opening{margin-bottom:6px}.opening-grid{grid-template-columns:1fr;gap:3px}.mobile-main-tabs{display:flex;gap:5px;margin-bottom:6px}.mobile-main-tabs .tab{min-height:34px}.workspace{display:block}.panel{display:none;grid-template-rows:auto auto auto;overflow:visible;margin-bottom:6px}.panel.mobile-active{display:grid}.panel-body{overflow:visible}.qa-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.qa-tabs .tab{min-height:38px}.drawer{top:auto;bottom:0;width:100%;height:min(72dvh,620px);border-radius:14px 14px 0 0;padding:12px}.drawer-title{font-size:15px}.drawer-text{font-size:14.5px}}
+    @media(max-width:760px){body{font-size:13.5px}.app{height:auto;min-height:100dvh;padding:6px;display:block}.brand{margin-bottom:5px}.opening{margin-bottom:6px}.opening-grid{grid-template-columns:1fr;gap:3px}.main-tabs{margin-bottom:6px}.workspace{display:block}.panel{display:none;height:auto;grid-template-rows:auto auto;overflow:visible;margin-bottom:6px}.panel.active{display:grid}.panel-body{overflow:visible}.drawer{top:auto;bottom:0;width:100%;height:min(72dvh,620px);border-radius:14px 14px 0 0;padding:12px}.drawer-title{font-size:15px}.drawer-text{font-size:14.5px}}
+    @media(max-width:520px){.qa-grid{grid-template-columns:1fr;gap:6px}}
   </style>
 </head>
 <body>
@@ -23,20 +24,18 @@
       <h2 class="section-label">① 新客进线</h2>
       <div class="opening-grid" id="opening"></div>
     </section>
-    <div class="mobile-main-tabs" aria-label="工作区切换">
-      <button class="tab active" data-pane="customers" type="button">客户分类</button>
-      <button class="tab" data-pane="qa" type="button">高频Q&A</button>
-    </div>
+    <nav class="main-tabs" aria-label="话术区域切换">
+      <button class="main-tab active" data-pane="customers" type="button" aria-selected="true">客户分类</button>
+      <button class="main-tab" data-pane="qa" type="button" aria-selected="false">高频Q&A</button>
+    </nav>
     <div class="workspace">
-      <section class="panel customer-panel mobile-active" id="customers-panel">
+      <section class="panel customer-panel active" id="customers-panel">
         <h2 class="panel-title">② 客户分类</h2>
-        <div class="tabs" id="customer-tabs"></div>
-        <div class="panel-body"><div class="list" id="customer-list"></div></div>
+        <div class="panel-body"><div class="customer-groups" id="customer-groups"></div></div>
       </section>
       <section class="panel qa-panel" id="qa-panel">
         <h2 class="panel-title">③ 高频Q&A</h2>
-        <div class="qa-tabs" id="qa-tabs"></div>
-        <div class="panel-body"><div class="index-list" id="qa-list"></div></div>
+        <div class="panel-body"><div class="qa-grid" id="qa-grid"></div></div>
       </section>
     </div>
   </main>
@@ -160,37 +159,37 @@
     },
     "qa": {
       "红葱 / 定制 / 鲜货": [
-        "红葱为什么5袋起卖",
-        "私人定制10袋起",
+        "红葱5袋起卖",
+        "私人定制10袋起卖",
         "为什么不卖鲜货"
       ],
       "分量/口味": [
         "四种牛肝菌口味区别",
-        "300克够几个人吃",
-        "收到后怎么回锅加热",
-        "一袋能炒多少碗饭"
+        "炒菌300克，够几个人吃",
+        "菌子炒熟的，热透就能吃",
+        "我家炒饭能顶馆子三盘"
       ],
       "价格": [
         "发商城链接看价格",
-        "今年价格还会不会降",
-        "为什么我家不算便宜"
+        "今年价格不会再降",
+        "我家比馆子和自己做还便宜"
       ],
       "优惠": [
-        "建议先少买两袋尝鲜",
-        "现在的满减满赠活动",
-        "临门一脚再优惠20元",
-        "下次补偿20元"
+        "先少买两袋尝尝鲜",
+        "优惠活动和包邮政策",
+        "讲价的酌情优惠20块",
+        "我方过错就补偿20块"
       ],
       "品质": [
-        "七年老店和山里收货",
-        "野生菌损耗为什么大",
-        "为什么拒绝便宜假菌"
+        "七年老店，做回头客生意",
+        "野生菌损耗大，难清洗",
+        "经济不好，卖假货的很多"
       ],
       "售后": [
-        "已经看到客户订单",
-        "冷冻保存和加热方法",
+        "下单后发食用指南",
+        "菌子保存方式",
         "发货时间和到货时效",
-        "老带新各减20元"
+        "老带新各减20"
       ]
     }
   }
@@ -213,18 +212,29 @@
       row.append(title,copy);return row;
     }
     function renderList(target,names,lines){target.replaceChildren(...lines.map((line,index)=>indexItem(names[index],line)))}
-    function buildTabs(target,groups,onSelect){
-      groups.forEach((group,index)=>{const button=document.createElement('button');button.type='button';button.className='tab'+(index===0?' active':'');button.textContent=group.title.replace(/^[ABC]\.\s*/, '');button.addEventListener('click',()=>{target.querySelectorAll('.tab').forEach(tab=>tab.classList.remove('active'));button.classList.add('active');onSelect(group,index)});target.append(button)});
+    function renderCustomerGroups(){
+      byId('customer-groups').replaceChildren(...data.content.customers.map(group=>{
+        const section=document.createElement('section');section.className='customer-group';
+        const title=document.createElement('h3');title.className='customer-group-title';title.textContent=group.title.replace(/^[ABC]\.\s*/, '');
+        const list=document.createElement('div');list.className='index-list';
+        renderList(list,data.labels.customers[group.title],group.lines);section.append(title,list);return section;
+      }));
+    }
+    function renderQaGroups(){
+      byId('qa-grid').replaceChildren(...data.content.qa.map(group=>{
+        const section=document.createElement('section');section.className='qa-group';
+        const title=document.createElement('h3');title.className='qa-group-title';title.textContent=group.title;
+        const list=document.createElement('div');list.className='index-list';
+        renderList(list,data.labels.qa[group.title],group.lines);section.append(title,list);return section;
+      }));
     }
     data.content.opening.forEach((line,index)=>byId('opening').append(indexItem(data.labels.opening[index],line)));
-    buildTabs(byId('customer-tabs'),data.content.customers,group=>renderList(byId('customer-list'),data.labels.customers[group.title],group.lines));
-    renderList(byId('customer-list'),data.labels.customers[data.content.customers[0].title],data.content.customers[0].lines);
-    buildTabs(byId('qa-tabs'),data.content.qa,group=>renderList(byId('qa-list'),data.labels.qa[group.title],group.lines));
-    renderList(byId('qa-list'),data.labels.qa[data.content.qa[0].title],data.content.qa[0].lines);
-    document.querySelectorAll('.mobile-main-tabs .tab').forEach(button=>button.addEventListener('click',()=>{
-      document.querySelectorAll('.mobile-main-tabs .tab').forEach(tab=>tab.classList.remove('active'));button.classList.add('active');
-      byId('customers-panel').classList.toggle('mobile-active',button.dataset.pane==='customers');
-      byId('qa-panel').classList.toggle('mobile-active',button.dataset.pane==='qa');
+    renderCustomerGroups();
+    renderQaGroups();
+    document.querySelectorAll('.main-tab').forEach(button=>button.addEventListener('click',()=>{
+      document.querySelectorAll('.main-tab').forEach(tab=>{const selected=tab===button;tab.classList.toggle('active',selected);tab.setAttribute('aria-selected',String(selected))});
+      byId('customers-panel').classList.toggle('active',button.dataset.pane==='customers');
+      byId('qa-panel').classList.toggle('active',button.dataset.pane==='qa');
     }));
     byId('drawer-close').addEventListener('click',closeDrawer);
     byId('drawer-layer').addEventListener('click',event=>{if(event.target===byId('drawer-layer'))closeDrawer()});
